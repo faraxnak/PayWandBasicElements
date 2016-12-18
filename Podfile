@@ -7,5 +7,7 @@ target 'PayWandBasicElements' do
 
   # Pods for PayWandBasicElements
   pod 'EasyPeasy'
+  pod 'SwiftyButton', '~> 0.5.0'
+  pod 'UIColor_Hex_Swift'
   
 end

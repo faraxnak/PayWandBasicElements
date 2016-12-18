@@ -1,12 +1,23 @@
 PODS:
   - EasyPeasy (1.4)
+  - PureLayout (3.0.2)
+  - SwiftyButton (0.5.0):
+    - SwiftyButton/CustomContent (= 0.5.0)
+  - SwiftyButton/CustomContent (0.5.0):
+    - PureLayout (~> 3.0)
+  - UIColor_Hex_Swift (3.0.2)
 
 DEPENDENCIES:
   - EasyPeasy
+  - SwiftyButton (~> 0.5.0)
+  - UIColor_Hex_Swift
 
 SPEC CHECKSUMS:
   EasyPeasy: c2e49ceb822edc0a5fffefd66240fff10129047d
+  PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
+  SwiftyButton: 7f1c7774a0aa721cbb6ea287742198ea0ee50c05
+  UIColor_Hex_Swift: 95f718452092a3efc8a827dffd2c04d3237be02d
 
-PODFILE CHECKSUM: 45ff5548c3a553dffa4bcba58c18a06b26489bd1
+PODFILE CHECKSUM: f36e3a9880799219eed7c02b0a1725f1f35d99f9
 
 COCOAPODS: 1.2.0.beta.1

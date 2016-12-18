@@ -134,5 +134,7 @@ Pod::Spec.new do |s|
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   s.dependency "EasyPeasy", "~> 1.4"
+  s.dependency 'SwiftyButton', '~> 0.5.0'
+  s.dependency 'UIColor_Hex_Swift'
 
 end
