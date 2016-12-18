@@ -13,6 +13,7 @@
 		751E526F1E067A200002F74B /* TtroDigitEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751E526A1E067A200002F74B /* TtroDigitEntry.swift */; };
 		751E52701E067A200002F74B /* TtroLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751E526B1E067A200002F74B /* TtroLabel.swift */; };
 		751E52711E067A210002F74B /* TtroTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751E526C1E067A200002F74B /* TtroTextField.swift */; };
+		777E40FC882C061CDE0D6ED0 /* Pods_PayWandBasicElements.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB43B98F1B1F2E7C15FF458E /* Pods_PayWandBasicElements.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		751E526A1E067A200002F74B /* TtroDigitEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TtroDigitEntry.swift; sourceTree = "<group>"; };
 		751E526B1E067A200002F74B /* TtroLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TtroLabel.swift; sourceTree = "<group>"; };
 		751E526C1E067A200002F74B /* TtroTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TtroTextField.swift; sourceTree = "<group>"; };
+		91CD423948AB35802853D190 /* Pods-PayWandBasicElements.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PayWandBasicElements.release.xcconfig"; path = "Pods/Target Support Files/Pods-PayWandBasicElements/Pods-PayWandBasicElements.release.xcconfig"; sourceTree = "<group>"; };
+		C569AEDF85EBDE15BCDA2DB3 /* Pods-PayWandBasicElements.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PayWandBasicElements.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PayWandBasicElements/Pods-PayWandBasicElements.debug.xcconfig"; sourceTree = "<group>"; };
+		EB43B98F1B1F2E7C15FF458E /* Pods_PayWandBasicElements.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PayWandBasicElements.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				777E40FC882C061CDE0D6ED0 /* Pods_PayWandBasicElements.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		040B6B5C38B5CFC25AB33BFC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EB43B98F1B1F2E7C15FF458E /* Pods_PayWandBasicElements.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		531509FF3AB91CDCF2091214 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C569AEDF85EBDE15BCDA2DB3 /* Pods-PayWandBasicElements.debug.xcconfig */,
+				91CD423948AB35802853D190 /* Pods-PayWandBasicElements.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		751E52531E0679A50002F74B = {
 			isa = PBXGroup;
 			children = (
 				751E525F1E0679A50002F74B /* PayWandBasicElements */,
 				751E525E1E0679A50002F74B /* Products */,
+				531509FF3AB91CDCF2091214 /* Pods */,
+				040B6B5C38B5CFC25AB33BFC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,10 +109,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 751E52651E0679A50002F74B /* Build configuration list for PBXNativeTarget "PayWandBasicElements" */;
 			buildPhases = (
+				87C9A603BAAE712F571913DF /* [CP] Check Pods Manifest.lock */,
 				751E52581E0679A50002F74B /* Sources */,
 				751E52591E0679A50002F74B /* Frameworks */,
 				751E525A1E0679A50002F74B /* Headers */,
 				751E525B1E0679A50002F74B /* Resources */,
+				4EA699F7C990CA08685D2EDD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -142,6 +168,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4EA699F7C990CA08685D2EDD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PayWandBasicElements/Pods-PayWandBasicElements-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		87C9A603BAAE712F571913DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		751E52581E0679A50002F74B /* Sources */ = {
@@ -260,6 +319,7 @@
 		};
 		751E52661E0679A50002F74B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C569AEDF85EBDE15BCDA2DB3 /* Pods-PayWandBasicElements.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -281,6 +341,7 @@
 		};
 		751E52671E0679A50002F74B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91CD423948AB35802853D190 /* Pods-PayWandBasicElements.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";

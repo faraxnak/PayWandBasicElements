@@ -1,0 +1,12 @@
+PODS:
+  - EasyPeasy (1.4)
+
+DEPENDENCIES:
+  - EasyPeasy
+
+SPEC CHECKSUMS:
+  EasyPeasy: c2e49ceb822edc0a5fffefd66240fff10129047d
+
+PODFILE CHECKSUM: 45ff5548c3a553dffa4bcba58c18a06b26489bd1
+
+COCOAPODS: 1.2.0.beta.1
