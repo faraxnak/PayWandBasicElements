@@ -8,12 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		751E52621E0679A50002F74B /* PayWandBasicElements.h in Headers */ = {isa = PBXBuildFile; fileRef = 751E52601E0679A50002F74B /* PayWandBasicElements.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		751E526D1E067A200002F74B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751E52681E067A200002F74B /* Extensions.swift */; };
+		751E526E1E067A200002F74B /* TtroButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751E52691E067A200002F74B /* TtroButton.swift */; };
+		751E526F1E067A200002F74B /* TtroDigitEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751E526A1E067A200002F74B /* TtroDigitEntry.swift */; };
+		751E52701E067A200002F74B /* TtroLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751E526B1E067A200002F74B /* TtroLabel.swift */; };
+		751E52711E067A210002F74B /* TtroTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751E526C1E067A200002F74B /* TtroTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		751E525D1E0679A50002F74B /* PayWandBasicElements.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PayWandBasicElements.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		751E52601E0679A50002F74B /* PayWandBasicElements.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PayWandBasicElements.h; sourceTree = "<group>"; };
 		751E52611E0679A50002F74B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		751E52681E067A200002F74B /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		751E52691E067A200002F74B /* TtroButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TtroButton.swift; sourceTree = "<group>"; };
+		751E526A1E067A200002F74B /* TtroDigitEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TtroDigitEntry.swift; sourceTree = "<group>"; };
+		751E526B1E067A200002F74B /* TtroLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TtroLabel.swift; sourceTree = "<group>"; };
+		751E526C1E067A200002F74B /* TtroTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TtroTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +56,11 @@
 		751E525F1E0679A50002F74B /* PayWandBasicElements */ = {
 			isa = PBXGroup;
 			children = (
+				751E52681E067A200002F74B /* Extensions.swift */,
+				751E52691E067A200002F74B /* TtroButton.swift */,
+				751E526A1E067A200002F74B /* TtroDigitEntry.swift */,
+				751E526B1E067A200002F74B /* TtroLabel.swift */,
+				751E526C1E067A200002F74B /* TtroTextField.swift */,
 				751E52601E0679A50002F74B /* PayWandBasicElements.h */,
 				751E52611E0679A50002F74B /* Info.plist */,
 			);
@@ -96,6 +111,7 @@
 					751E525C1E0679A50002F74B = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = F53V3ZJV96;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -132,6 +148,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				751E526E1E067A200002F74B /* TtroButton.swift in Sources */,
+				751E526F1E067A200002F74B /* TtroDigitEntry.swift in Sources */,
+				751E526D1E067A200002F74B /* Extensions.swift in Sources */,
+				751E52701E067A200002F74B /* TtroLabel.swift in Sources */,
+				751E52711E067A210002F74B /* TtroTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +261,7 @@
 		751E52661E0679A50002F74B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = F53V3ZJV96;
@@ -252,6 +274,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ParsPay.PayWandBasicElements;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -259,6 +282,7 @@
 		751E52671E0679A50002F74B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = F53V3ZJV96;
