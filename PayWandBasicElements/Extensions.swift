@@ -9,12 +9,12 @@
 import UIKit
 import UIColor_Hex_Swift
 
-protocol ttroColorProtocol {
+public protocol TtroColorProtocol {
     var color : UIColor { get }
 }
 
 extension UIColor {
-    enum ttroColors : ttroColorProtocol {
+    public enum TtroColors : TtroColorProtocol {
         case white
         case darkBlue
         case lightBlue
@@ -23,7 +23,7 @@ extension UIColor {
         case orange
         case red
         
-        var color: UIColor {
+        public var color: UIColor {
             switch self {
             case .white:
                 return UIColor("#f0f0f0")
@@ -44,12 +44,12 @@ extension UIColor {
     }
 }
 
-protocol ttroFontProtocol {
+public protocol TtroFontProtocol {
     var font : UIFont { get }
 }
 
 extension UIFont {
-    enum ttroFonts : ttroFontProtocol {
+    public enum TtroFonts : TtroFontProtocol {
         case extraLight(size : CGFloat)
         case semibold(size : CGFloat)
         case bold(size : CGFloat)
@@ -80,12 +80,12 @@ extension UIFont {
             }
         }
         
-        var font: UIFont {
+        public var font: UIFont {
             return getFont()
         }
     }
     
-    enum ttroPayWandFonts : ttroFontProtocol {
+    public enum TtroPayWandFonts : TtroFontProtocol {
         case semibold1, semibold2
         case regular1, regular2, regular3, regular4, regular5
         case light1, light2, light3, light4, light5
@@ -94,96 +94,96 @@ extension UIFont {
             if (DeviceType.IS_IPAD){
                 switch self {
                 case .semibold1:
-                    return ttroFonts.semibold(size: 20).font
+                    return TtroFonts.semibold(size: 20).font
                 case .semibold2:
-                    return ttroFonts.semibold(size: 40).font
+                    return TtroFonts.semibold(size: 40).font
                 case .regular1:
-                    return ttroFonts.regular(size: 24).font
+                    return TtroFonts.regular(size: 24).font
                 case .regular2:
-                    return ttroFonts.regular(size: 30).font
+                    return TtroFonts.regular(size: 30).font
                 case .regular3:
-                    return ttroFonts.regular(size: 36).font
+                    return TtroFonts.regular(size: 36).font
                 case .regular4:
-                    return ttroFonts.regular(size: 40).font
+                    return TtroFonts.regular(size: 40).font
                 case .regular5:
-                    return ttroFonts.regular(size: 48).font
+                    return TtroFonts.regular(size: 48).font
                 case .light1:
-                    return ttroFonts.light(size: 16).font
+                    return TtroFonts.light(size: 16).font
                 case .light2:
-                    return ttroFonts.light(size: 20).font
+                    return TtroFonts.light(size: 20).font
                 case .light3:
-                    return ttroFonts.light(size: 24).font
+                    return TtroFonts.light(size: 24).font
                 case .light4:
-                    return ttroFonts.light(size: 30).font
+                    return TtroFonts.light(size: 30).font
                 case .light5:
-                    return ttroFonts.light(size: 36).font
+                    return TtroFonts.light(size: 36).font
                 }
             }
             else if (DeviceType.IS_IPHONE_6 || DeviceType.IS_IPHONE_6P) {
                 switch self {
                 case .semibold1:
-                    return ttroFonts.semibold(size: 18).font
+                    return TtroFonts.semibold(size: 18).font
                 case .semibold2:
-                    return ttroFonts.semibold(size: 40).font
+                    return TtroFonts.semibold(size: 40).font
                 case .regular1:
-                    return ttroFonts.regular(size: 20).font
+                    return TtroFonts.regular(size: 20).font
                 case .regular2:
-                    return ttroFonts.regular(size: 24).font
+                    return TtroFonts.regular(size: 24).font
                 case .regular3:
-                    return ttroFonts.regular(size: 30).font
+                    return TtroFonts.regular(size: 30).font
                 case .regular4:
-                    return ttroFonts.regular(size: 36).font
+                    return TtroFonts.regular(size: 36).font
                 case .regular5:
-                    return ttroFonts.regular(size: 44).font
+                    return TtroFonts.regular(size: 44).font
                 case .light1:
-                    return ttroFonts.light(size: 14).font
+                    return TtroFonts.light(size: 14).font
                 case .light2:
-                    return ttroFonts.light(size: 20).font
+                    return TtroFonts.light(size: 20).font
                 case .light3:
-                    return ttroFonts.light(size: 24).font
+                    return TtroFonts.light(size: 24).font
                 case .light4:
-                    return ttroFonts.light(size: 28).font
+                    return TtroFonts.light(size: 28).font
                 case .light5:
-                    return ttroFonts.light(size: 34).font
+                    return TtroFonts.light(size: 34).font
                 }
             }
             else {
                 switch self {
                 case .semibold1:
-                    return ttroFonts.semibold(size: 14).font
+                    return TtroFonts.semibold(size: 14).font
                 case .semibold2:
-                    return ttroFonts.semibold(size: 40).font
+                    return TtroFonts.semibold(size: 40).font
                 case .regular1:
-                    return ttroFonts.regular(size: 16).font
+                    return TtroFonts.regular(size: 16).font
                 case .regular2:
-                    return ttroFonts.regular(size: 20).font
+                    return TtroFonts.regular(size: 20).font
                 case .regular3:
-                    return ttroFonts.regular(size: 24).font
+                    return TtroFonts.regular(size: 24).font
                 case .regular4:
-                    return ttroFonts.regular(size: 30).font
+                    return TtroFonts.regular(size: 30).font
                 case .regular5:
-                    return ttroFonts.regular(size: 40).font
+                    return TtroFonts.regular(size: 40).font
                 case .light1:
-                    return ttroFonts.light(size: 12).font
+                    return TtroFonts.light(size: 12).font
                 case .light2:
-                    return ttroFonts.light(size: 16).font
+                    return TtroFonts.light(size: 16).font
                 case .light3:
-                    return ttroFonts.light(size: 20).font
+                    return TtroFonts.light(size: 20).font
                 case .light4:
-                    return ttroFonts.light(size: 24).font
+                    return TtroFonts.light(size: 24).font
                 case .light5:
-                    return ttroFonts.light(size: 30).font
+                    return TtroFonts.light(size: 30).font
                 }
             }
         }
         
-        var font: UIFont {
+        public var font: UIFont {
             return getFont()
         }
     }
 }
 
-struct ScreenSize
+public struct ScreenSize
 {
     static let SCREEN_WIDTH         = UIScreen.main.bounds.size.width
     static let SCREEN_HEIGHT        = UIScreen.main.bounds.size.height
@@ -191,7 +191,7 @@ struct ScreenSize
     static let SCREEN_MIN_LENGTH    = min(ScreenSize.SCREEN_WIDTH, ScreenSize.SCREEN_HEIGHT)
 }
 
-struct DeviceType
+public struct DeviceType
 {
     static let IS_IPHONE_4_OR_LESS  = UIDevice.current.userInterfaceIdiom == .phone && ScreenSize.SCREEN_MAX_LENGTH < 568.0
     static let IS_IPHONE_5          = UIDevice.current.userInterfaceIdiom == .phone && ScreenSize.SCREEN_MAX_LENGTH == 568.0

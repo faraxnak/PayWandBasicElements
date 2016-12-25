@@ -30,7 +30,7 @@ class TtroTextField: UITextField {
     }
     
     convenience init(placeholder : String, fontSize : CGFloat){
-        self.init(placeholder : placeholder, font: UIFont.ttroFonts.regular(size: fontSize).font)
+        self.init(placeholder : placeholder, font: UIFont.TtroFonts.regular(size: fontSize).font)
     }
     
     convenience init(placeholder : String, font : UIFont){
@@ -41,10 +41,10 @@ class TtroTextField: UITextField {
         layer.borderWidth = 0
         //textAlignment = .Center
         backgroundColor = UIColor.white.withAlphaComponent(0.2)
-        textColor = UIColor.ttroColors.white.color
-        attributedPlaceholder = NSAttributedString(string:placeholder, attributes:[NSForegroundColorAttributeName: UIColor.ttroColors.white.color.withAlphaComponent(0.5)])
+        textColor = UIColor.TtroColors.white.color
+        attributedPlaceholder = NSAttributedString(string:placeholder, attributes:[NSForegroundColorAttributeName: UIColor.TtroColors.white.color.withAlphaComponent(0.5)])
         translatesAutoresizingMaskIntoConstraints = false
-        tintColor = UIColor.ttroColors.white.color
+        tintColor = UIColor.TtroColors.white.color
         delegate = self
     }
     
@@ -66,7 +66,7 @@ class TtroTextField: UITextField {
     func setStyle(_ style : Style){
         switch style {
         case .dark:
-            backgroundColor = UIColor.ttroColors.darkBlue.color.withAlphaComponent(0.4)
+            backgroundColor = UIColor.TtroColors.darkBlue.color.withAlphaComponent(0.4)
             borderStyle = .roundedRect
         case .light:
             backgroundColor = UIColor.white.withAlphaComponent(0.2)
@@ -160,19 +160,19 @@ class TtroTextView: UITextView, UITextViewDelegate {
     
     convenience init(placeholder : String, fontSize : CGFloat){
         self.init(frame: CGRect.zero)
-        font = UIFont.ttroFonts.regular(size: fontSize).font
+        font = UIFont.TtroFonts.regular(size: fontSize).font
         //borderStyle = .RoundedRect
         layer.cornerRadius = 5
         layer.masksToBounds = true
         layer.borderColor = UIColor.clear.cgColor
         //textAlignment = .Center
         backgroundColor = UIColor.white.withAlphaComponent(0.2)
-        textColor = UIColor.ttroColors.white.color
-        tintColor = UIColor.ttroColors.white.color
+        textColor = UIColor.TtroColors.white.color
+        tintColor = UIColor.TtroColors.white.color
         
         delegate = self
         
-        //attributedPlaceholder = NSAttributedString(string:placeholder, attributes:[NSForegroundColorAttributeName: UIColor.ttroColors.White.color.colorWithAlphaComponent(0.5)])
+        //attributedPlaceholder = NSAttributedString(string:placeholder, attributes:[NSForegroundColorAttributeName: UIColor.TtroColors.White.color.colorWithAlphaComponent(0.5)])
         translatesAutoresizingMaskIntoConstraints = false
     }
     

@@ -45,14 +45,14 @@ class TtroDigitEntry: UITextField, UITextFieldDelegate {
         layer.masksToBounds = true
         switch mode {
         case .light:
-            textColor = UIColor.ttroColors.white.color
-            self.backgroundColor = UIColor.ttroColors.white.color.withAlphaComponent(0.2)
+            textColor = UIColor.TtroColors.white.color
+            self.backgroundColor = UIColor.TtroColors.white.color.withAlphaComponent(0.2)
         case .dark:
-            textColor = UIColor.ttroColors.darkBlue.color
-            self.backgroundColor = UIColor.ttroColors.darkBlue.color.withAlphaComponent(0.2)
+            textColor = UIColor.TtroColors.darkBlue.color
+            self.backgroundColor = UIColor.TtroColors.darkBlue.color.withAlphaComponent(0.2)
         }
         
-        font = UIFont.ttroFonts.regular(size: 20).font
+        font = UIFont.TtroFonts.regular(size: 20).font
         text = defaultChar
         self.defaultChar = defaultChar
     }

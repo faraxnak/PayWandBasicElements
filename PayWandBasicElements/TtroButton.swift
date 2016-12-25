@@ -11,29 +11,29 @@ import EasyPeasy
 import SwiftyButton
 
 extension UIButton {
-    enum TtroMode {
+    public enum TtroMode {
         case flat
         case pressable
         case backgroundless
     }
-    func setMode(_ mode : TtroMode, font : UIFont = UIFont.ttroPayWandFonts.regular2.font) {
+    func setMode(_ mode : TtroMode, font : UIFont = UIFont.TtroPayWandFonts.regular2.font) {
         switch mode {
         case .flat:
             layer.cornerRadius = 5
-            backgroundColor = UIColor.ttroColors.cyan.color.withAlphaComponent(0.7)
+            backgroundColor = UIColor.TtroColors.cyan.color.withAlphaComponent(0.7)
             titleLabel?.font = font
-            setTitleColor(UIColor.ttroColors.darkBlue.color, for: UIControlState())
+            setTitleColor(UIColor.TtroColors.darkBlue.color, for: UIControlState())
             //titleLabel?.addObserver(self, forKeyPath: "text", options: [.Old, .New], context: nil)
         case .pressable:
             if let sButton = self as? SwiftyButton {
-                sButton.shadowColor  = UIColor.ttroColors.darkBlue.color.withAlphaComponent(0.5)
+                sButton.shadowColor  = UIColor.TtroColors.darkBlue.color.withAlphaComponent(0.5)
                 sButton.shadowHeight = 2
                 sButton.cornerRadius = 5
             }
         case .backgroundless:
             titleLabel?.font = font
             
-            setTitleColor(UIColor.ttroColors.cyan.color, for: UIControlState())
+            setTitleColor(UIColor.TtroColors.cyan.color, for: UIControlState())
         }
         
     }
