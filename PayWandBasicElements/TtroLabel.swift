@@ -8,22 +8,22 @@
 
 import UIKit
 
-class TtroLabel: UILabel {
+public class TtroLabel: UILabel {
     
     var mainFont : UIFont!
     
-    convenience init(font : UIFont, color : UIColor) {
+    public convenience init(font : UIFont, color : UIColor) {
         self.init(frame : CGRect.zero)
         textColor = color
         self.font = font
         mainFont = font
     }
     
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
@@ -66,7 +66,7 @@ class TtroLabel: UILabel {
 }
 
 extension String {
-    func widthWithConstrainedWidth(_ height: CGFloat, font: UIFont) -> CGFloat {
+    public func widthWithConstrainedWidth(_ height: CGFloat, font: UIFont) -> CGFloat {
         let constraintRect = CGSize(width: CGFloat.greatestFiniteMagnitude, height: height)
         
         let boundingBox = self.boundingRect(with: constraintRect, options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSFontAttributeName: font], context: nil)

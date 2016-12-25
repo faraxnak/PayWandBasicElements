@@ -16,7 +16,7 @@ extension UIButton {
         case pressable
         case backgroundless
     }
-    func setMode(_ mode : TtroMode, font : UIFont = UIFont.TtroPayWandFonts.regular2.font) {
+    public func setMode(_ mode : TtroMode, font : UIFont = UIFont.TtroPayWandFonts.regular2.font) {
         switch mode {
         case .flat:
             layer.cornerRadius = 5
@@ -63,7 +63,7 @@ extension UIButton {
 }
 
 extension UIButton {
-    func setIconText(_ text : String, image : UIImage?) {
+    public func setIconText(_ text : String, image : UIImage?) {
         
 //        setImage(image, forState: UIControlState.Normal)
 //        
@@ -135,23 +135,23 @@ extension UIButton {
     }
 }
 
-class TouchPassingUIImageView: UIImageView {
+public class TouchPassingUIImageView: UIImageView {
     var parentView : UIView!
     
-    convenience init(image: UIImage?, parentView : UIView) {
+    public convenience init(image: UIImage?, parentView : UIView) {
         self.init(image : image)
         self.parentView = parentView
     }
     
-    override init(image: UIImage?) {
+    public override init(image: UIImage?) {
         super.init(image: image)
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+    public override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
         let view = super.hitTest(point, with: event)
         
         if (view == self){
@@ -163,9 +163,9 @@ class TouchPassingUIImageView: UIImageView {
 }
 
 
-class TtroAlertButton: UIButton {
+public class TtroAlertButton: UIButton {
     
-    var action :(() -> Void)?
+    public var action :(() -> Void)?
     
     fileprivate func actionHandleBlock(_ action:(() -> Void)? = nil) {
         
@@ -180,7 +180,7 @@ class TtroAlertButton: UIButton {
         self.actionHandleBlock()
     }
     
-    func actionHandle(controlEvents control :UIControlEvents, ForAction action:@escaping () -> Void) {
+    public func actionHandle(controlEvents control :UIControlEvents, ForAction action:@escaping () -> Void) {
         self.actionHandleBlock(action)
         self.addTarget(self, action: #selector(triggerActionHandleBlock), for: control)
     }

@@ -15,24 +15,24 @@ import UIKit
     @objc optional func onClearText()
 }
 
-class TtroDigitEntry: UITextField, UITextFieldDelegate {
+public class TtroDigitEntry: UITextField, UITextFieldDelegate {
     
     
-    var nextTextField : TtroDigitEntry?
-    var previousTextField : TtroDigitEntry?
+    public var nextTextField : TtroDigitEntry?
+    public var previousTextField : TtroDigitEntry?
     
-    var pinDelegate : TtroDigitEntryDelegate!
+    public var pinDelegate : TtroDigitEntryDelegate!
     
-    var numOfDigits = 1
+    public var numOfDigits = 1
     
-    var defaultChar = "_"
+    public var defaultChar = "_"
     
-    enum Mode {
+    public enum Mode {
         case light
         case dark
     }
     
-    convenience init(next : TtroDigitEntry?, previous : TtroDigitEntry?, defaultChar : String = "_", mode : Mode = .light){
+    public convenience init(next : TtroDigitEntry?, previous : TtroDigitEntry?, defaultChar : String = "_", mode : Mode = .light){
         self.init(frame : CGRect.zero)
         self.nextTextField = next
         self.previousTextField = previous
@@ -57,15 +57,15 @@ class TtroDigitEntry: UITextField, UITextFieldDelegate {
         self.defaultChar = defaultChar
     }
     
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+    public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
         // Create an `NSCharacterSet` set which includes everything *but* the digits
         let inverseSet = CharacterSet(charactersIn:"0123456789●" + defaultChar).inverted
@@ -112,7 +112,7 @@ class TtroDigitEntry: UITextField, UITextFieldDelegate {
         return true
     }
     
-    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+    public func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         if (previousTextField?.text == defaultChar){
             previousTextField?.becomeFirstResponder()
             return false
@@ -120,19 +120,19 @@ class TtroDigitEntry: UITextField, UITextFieldDelegate {
         return pinDelegate.textFieldShouldBeginEditing!(textField)
     }
     
-    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+    public func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
         return pinDelegate.textFieldShouldEndEditing!(textField)
     }
     
-    func textFieldDidEndEditing(_ textField: UITextField) {
+    public func textFieldDidEndEditing(_ textField: UITextField) {
          pinDelegate.textFieldDidEndEditing?(textField)
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         return pinDelegate.textFieldShouldReturn!(textField)
     }
     
-    func textFieldDidBeginEditing(_ textField: UITextField) {
+    public func textFieldDidBeginEditing(_ textField: UITextField) {
         pinDelegate.textFieldDidBeginEditing?(textField)
     }
     
@@ -152,11 +152,11 @@ class TtroDigitEntry: UITextField, UITextFieldDelegate {
 
     }
     
-    override func caretRect(for position: UITextPosition) -> CGRect {
+    public override func caretRect(for position: UITextPosition) -> CGRect {
         return CGRect.zero
     }
     
-    func unlockedByTouchId(){
+    public func unlockedByTouchId(){
         text = "●"
     }
     

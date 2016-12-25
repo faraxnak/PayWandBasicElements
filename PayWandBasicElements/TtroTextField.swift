@@ -9,10 +9,10 @@
 import UIKit
 
 
-class TtroTextField: UITextField {
+public class TtroTextField: UITextField {
     
     fileprivate var _inputMode = InputMode.all
-    var inputMode : InputMode {
+    public var inputMode : InputMode {
         get {
             return _inputMode
         }
@@ -21,19 +21,19 @@ class TtroTextField: UITextField {
         }
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame : frame)
     }
     
-    convenience init(placeholder : String, fontSize : CGFloat){
+    public convenience init(placeholder : String, fontSize : CGFloat){
         self.init(placeholder : placeholder, font: UIFont.TtroFonts.regular(size: fontSize).font)
     }
     
-    convenience init(placeholder : String, font : UIFont){
+    public convenience init(placeholder : String, font : UIFont){
         self.init(frame: CGRect.zero)
         self.font = font
         borderStyle = .roundedRect
@@ -48,13 +48,13 @@ class TtroTextField: UITextField {
         delegate = self
     }
     
-    enum Style {
+    public enum Style {
         case light
         case dark
         case readOnly
     }
     
-    enum InputMode {
+    public enum InputMode {
         case all
         case phoneNumber
         case digit
@@ -63,7 +63,7 @@ class TtroTextField: UITextField {
         case name
     }
     
-    func setStyle(_ style : Style){
+    public func setStyle(_ style : Style){
         switch style {
         case .dark:
             backgroundColor = UIColor.TtroColors.darkBlue.color.withAlphaComponent(0.4)
@@ -77,7 +77,7 @@ class TtroTextField: UITextField {
         }
     }
     
-    func setStyle(_ editable : Bool, isProfileTable : Bool){
+    public func setStyle(_ editable : Bool, isProfileTable : Bool){
         if (editable){
             if (isProfileTable){
                 setStyle(.dark)
@@ -89,7 +89,7 @@ class TtroTextField: UITextField {
         }
     }
     
-    func checkInputCharacters(shouldChangeCharactersIn range: NSRange,
+    public func checkInputCharacters(shouldChangeCharactersIn range: NSRange,
                     replacementString string: String) -> Bool {
         var inverseSet : CharacterSet!
         // Create an `NSCharacterSet` set which includes everything *but* the digits
@@ -138,7 +138,7 @@ class TtroTextField: UITextField {
 }
 
 extension TtroTextField : UITextFieldDelegate {
-    func textField(_ textField: UITextField,
+    public func textField(_ textField: UITextField,
                    shouldChangeCharactersIn range: NSRange,
                    replacementString string: String) -> Bool {
         return checkInputCharacters(shouldChangeCharactersIn: range, replacementString: string)
@@ -146,19 +146,19 @@ extension TtroTextField : UITextFieldDelegate {
 }
 
 
-class TtroTextView: UITextView, UITextViewDelegate {
+public class TtroTextView: UITextView, UITextViewDelegate {
     
-    var textFieldDelegate : UITextFieldDelegate!
+    public var textFieldDelegate : UITextFieldDelegate!
     
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
-    override init(frame: CGRect, textContainer: NSTextContainer?) {
+    public override init(frame: CGRect, textContainer: NSTextContainer?) {
         super.init(frame: frame, textContainer: textContainer)
     }
     
-    convenience init(placeholder : String, fontSize : CGFloat){
+    public convenience init(placeholder : String, fontSize : CGFloat){
         self.init(frame: CGRect.zero)
         font = UIFont.TtroFonts.regular(size: fontSize).font
         //borderStyle = .RoundedRect
@@ -176,19 +176,19 @@ class TtroTextView: UITextView, UITextViewDelegate {
         translatesAutoresizingMaskIntoConstraints = false
     }
     
-    func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
+    public func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
         return textFieldDelegate.textFieldShouldBeginEditing!(UITextField())
     }
     
-    func textViewShouldEndEditing(_ textView: UITextView) -> Bool {
+    public func textViewShouldEndEditing(_ textView: UITextView) -> Bool {
         return textFieldDelegate.textFieldShouldEndEditing!(UITextField())
     }
     
-    func textViewDidBeginEditing(_ textView: UITextView) {
+    public func textViewDidBeginEditing(_ textView: UITextView) {
         textFieldDelegate.textFieldDidBeginEditing!(UITextField())
     }
     
-    func textViewDidEndEditing(_ textView: UITextView) {
+    public func textViewDidEndEditing(_ textView: UITextView) {
         textFieldDelegate.textFieldDidEndEditing!(UITextField())
     }
 }
