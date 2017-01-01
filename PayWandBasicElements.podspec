@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "PayWandBasicElements"
-  s.version      = "0.0.5"
+  s.version      = "0.0.6"
   s.summary      = "PayWandBasicElements used in PayWand wallet."
 
   # This description is used to generate tags and improve search results.
