@@ -13,6 +13,7 @@
 		751E526F1E067A200002F74B /* TtroDigitEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751E526A1E067A200002F74B /* TtroDigitEntry.swift */; };
 		751E52701E067A200002F74B /* TtroLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751E526B1E067A200002F74B /* TtroLabel.swift */; };
 		751E52711E067A210002F74B /* TtroTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751E526C1E067A200002F74B /* TtroTextField.swift */; };
+		75F52FBE1E1421FC0098ED68 /* APCustomBlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F52FBD1E1421FC0098ED68 /* APCustomBlurView.swift */; };
 		777E40FC882C061CDE0D6ED0 /* Pods_PayWandBasicElements.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB43B98F1B1F2E7C15FF458E /* Pods_PayWandBasicElements.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		751E526A1E067A200002F74B /* TtroDigitEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TtroDigitEntry.swift; sourceTree = "<group>"; };
 		751E526B1E067A200002F74B /* TtroLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TtroLabel.swift; sourceTree = "<group>"; };
 		751E526C1E067A200002F74B /* TtroTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TtroTextField.swift; sourceTree = "<group>"; };
+		75F52FBD1E1421FC0098ED68 /* APCustomBlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APCustomBlurView.swift; sourceTree = "<group>"; };
 		91CD423948AB35802853D190 /* Pods-PayWandBasicElements.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PayWandBasicElements.release.xcconfig"; path = "Pods/Target Support Files/Pods-PayWandBasicElements/Pods-PayWandBasicElements.release.xcconfig"; sourceTree = "<group>"; };
 		C569AEDF85EBDE15BCDA2DB3 /* Pods-PayWandBasicElements.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PayWandBasicElements.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PayWandBasicElements/Pods-PayWandBasicElements.debug.xcconfig"; sourceTree = "<group>"; };
 		EB43B98F1B1F2E7C15FF458E /* Pods_PayWandBasicElements.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PayWandBasicElements.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,6 +82,7 @@
 		751E525F1E0679A50002F74B /* PayWandBasicElements */ = {
 			isa = PBXGroup;
 			children = (
+				75F52FBD1E1421FC0098ED68 /* APCustomBlurView.swift */,
 				751E52681E067A200002F74B /* Extensions.swift */,
 				751E52691E067A200002F74B /* TtroButton.swift */,
 				751E526A1E067A200002F74B /* TtroDigitEntry.swift */,
@@ -210,6 +213,7 @@
 				751E526E1E067A200002F74B /* TtroButton.swift in Sources */,
 				751E526F1E067A200002F74B /* TtroDigitEntry.swift in Sources */,
 				751E526D1E067A200002F74B /* Extensions.swift in Sources */,
+				75F52FBE1E1421FC0098ED68 /* APCustomBlurView.swift in Sources */,
 				751E52701E067A200002F74B /* TtroLabel.swift in Sources */,
 				751E52711E067A210002F74B /* TtroTextField.swift in Sources */,
 			);
@@ -379,6 +383,7 @@
 				751E52671E0679A50002F74B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
