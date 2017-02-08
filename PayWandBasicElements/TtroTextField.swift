@@ -21,6 +21,8 @@ public class TtroTextField: UITextField {
         }
     }
     
+    var _style : Style = .dark
+    
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
@@ -45,13 +47,13 @@ public class TtroTextField: UITextField {
         attributedPlaceholder = NSAttributedString(string:placeholder, attributes:[NSForegroundColorAttributeName: UIColor.TtroColors.white.color.withAlphaComponent(0.5)])
         translatesAutoresizingMaskIntoConstraints = false
         tintColor = UIColor.TtroColors.white.color
-        delegate = self
     }
     
     public enum Style {
         case light
         case dark
         case readOnly
+        case wrongFormat
     }
     
     public enum InputMode {
@@ -61,6 +63,7 @@ public class TtroTextField: UITextField {
         case double
         case alphaNumeric
         case name
+        case email
     }
     
     public func setStyle(_ style : Style){
@@ -74,19 +77,25 @@ public class TtroTextField: UITextField {
         case .readOnly:
             backgroundColor = UIColor.clear
             borderStyle = .none
+        case .wrongFormat:
+            backgroundColor = UIColor.red.withAlphaComponent(0.4)
+//            borderStyle = .roundedRect
+//            layer.borderColor = UIColor.red.cgColor
+//            layer.borderWidth = 1
         }
     }
     
     public func setStyle(_ editable : Bool, isProfileTable : Bool){
         if (editable){
             if (isProfileTable){
-                setStyle(.dark)
+                _style = .dark
             } else {
-                setStyle(.light)
+                _style = .light
             }
         } else {
-            setStyle(.readOnly)
+            _style = .readOnly
         }
+        setStyle(_style)
     }
     
     public func checkInputCharacters(shouldChangeCharactersIn range: NSRange,
@@ -137,11 +146,39 @@ public class TtroTextField: UITextField {
 
 }
 
-extension TtroTextField : UITextFieldDelegate {
-    public func textField(_ textField: UITextField,
-                   shouldChangeCharactersIn range: NSRange,
-                   replacementString string: String) -> Bool {
-        return checkInputCharacters(shouldChangeCharactersIn: range, replacementString: string)
+// MARK : Validation
+extension TtroTextField {
+    
+    public func checkValidity() -> Bool{
+        var state : Bool = true
+        switch inputMode {
+        case .email:
+            state = isValidEmail()
+        case .name:
+            state = isValidName()
+        default:
+            break
+        }
+        if (!state) {
+            setStyle(.wrongFormat)
+        } else {
+            setStyle(_style)
+        }
+        return state
+    }
+    
+    func isValidEmail() -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailTest.evaluate(with: self.text!)
+    }
+    
+    func isValidName() -> Bool {
+        let nameRegEx = "[A-Za-z]{1,30}"
+        
+        let nameTest = NSPredicate(format:"SELF MATCHES %@", nameRegEx)
+        return nameTest.evaluate(with: self.text!)
     }
 }
 
