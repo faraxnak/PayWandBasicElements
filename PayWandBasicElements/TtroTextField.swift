@@ -22,6 +22,17 @@ public class TtroTextField: UITextField {
     }
     
     var _style : Style = .dark
+    var style : Style {
+        get {
+            return _style
+        }
+        set {
+            _style = newValue
+            setStyle(_style)
+        }
+    }
+    
+    public var shouldMoveUpOnBeginEdit : Bool = true
     
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -38,11 +49,12 @@ public class TtroTextField: UITextField {
     public convenience init(placeholder : String, font : UIFont){
         self.init(frame: CGRect.zero)
         self.font = font
-        borderStyle = .roundedRect
+//        borderStyle = .roundedRect
         layer.borderColor = UIColor.clear.cgColor
         layer.borderWidth = 0
         //textAlignment = .Center
-        backgroundColor = UIColor.white.withAlphaComponent(0.2)
+//        backgroundColor = UIColor.white.withAlphaComponent(0.2)
+        style = .light
         textColor = UIColor.TtroColors.white.color
         attributedPlaceholder = NSAttributedString(string:placeholder, attributes:[NSForegroundColorAttributeName: UIColor.TtroColors.white.color.withAlphaComponent(0.5)])
         translatesAutoresizingMaskIntoConstraints = false
@@ -78,7 +90,9 @@ public class TtroTextField: UITextField {
             backgroundColor = UIColor.clear
             borderStyle = .none
         case .wrongFormat:
-            backgroundColor = UIColor.red.withAlphaComponent(0.4)
+            if (style != .readOnly){
+                backgroundColor = UIColor.red.withAlphaComponent(0.4)
+            }
 //            borderStyle = .roundedRect
 //            layer.borderColor = UIColor.red.cgColor
 //            layer.borderWidth = 1
@@ -88,14 +102,13 @@ public class TtroTextField: UITextField {
     public func setStyle(_ editable : Bool, isProfileTable : Bool){
         if (editable){
             if (isProfileTable){
-                _style = .dark
+                style = .dark
             } else {
-                _style = .light
+                style = .light
             }
         } else {
-            _style = .readOnly
+            style = .readOnly
         }
-        setStyle(_style)
     }
     
     public func checkInputCharacters(shouldChangeCharactersIn range: NSRange,
@@ -162,9 +175,13 @@ extension TtroTextField {
         if (!state) {
             setStyle(.wrongFormat)
         } else {
-            setStyle(_style)
+            setStyle(style)
         }
         return state
+    }
+    
+    public func setToNormalState(){
+        setStyle(style)
     }
     
     func isValidEmail() -> Bool {
