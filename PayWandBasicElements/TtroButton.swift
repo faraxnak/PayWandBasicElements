@@ -10,11 +10,67 @@ import UIKit
 import EasyPeasy
 import SwiftyButton
 
+public class TtroButton: UIButton {
+    
+    var mode = TtroMode.flat
+    var corners : UIRectCorner! = [.topLeft , .bottomLeft]
+    var radius : CGFloat! = 10
+    
+    public func setMode(mode: UIButton.TtroMode, font: UIFont = UIFont.TtroPayWandFonts.regular2.font) {
+        setMode(mode, font: font)
+        self.mode = mode
+    }
+    
+    public convenience init(corners : UIRectCorner, radius : CGFloat){
+        self.init()
+        self.corners = corners
+        self.radius = radius
+    }
+    
+    public init(){
+        super.init(frame: .zero)
+        setTitleColor(UIColor.TtroColors.cyan.color.withAlphaComponent(0.5), for: .highlighted)
+    }
+    
+//    public override init(frame: CGRect) {
+//        super.init(frame: frame)
+//    }
+    
+    public required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    public func setCurvature(corners : UIRectCorner, radius : CGFloat){
+        self.corners = corners
+        self.radius = radius
+    }
+    
+    override public func layoutSubviews() {
+        super.layoutSubviews()
+        if (mode == .fullBorder) {
+            let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+            
+            let mask = CAShapeLayer()
+            mask.path = path.cgPath
+            self.layer.mask = mask
+            
+            let frameLayer = CAShapeLayer(layer: layer)
+            frameLayer.frame = bounds
+            frameLayer.path = path.cgPath
+            frameLayer.strokeColor = UIColor.TtroColors.cyan.color.cgColor
+            frameLayer.fillColor = nil
+            frameLayer.lineWidth = 2
+            layer.addSublayer(frameLayer)
+        }
+    }
+}
+
 extension UIButton {
     public enum TtroMode {
         case flat
         case pressable
         case backgroundless
+        case fullBorder
     }
     public func setMode(_ mode : TtroMode, font : UIFont = UIFont.TtroPayWandFonts.regular2.font) {
         switch mode {
@@ -32,8 +88,13 @@ extension UIButton {
             }
         case .backgroundless:
             titleLabel?.font = font
-            
             setTitleColor(UIColor.TtroColors.cyan.color, for: UIControlState())
+        case .fullBorder:
+            titleLabel?.font = font
+            setTitleColor(UIColor.TtroColors.cyan.color, for: UIControlState())
+//            layer.borderColor = UIColor.TtroColors.cyan.color.cgColor
+//            layer.borderWidth = 1
+//            layer.masksToBounds = true
         }
         
     }

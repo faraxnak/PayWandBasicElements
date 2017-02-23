@@ -32,6 +32,9 @@ public class TtroTextField: UITextField {
         }
     }
     
+    var corners : UIRectCorner! = []
+    var radius : CGFloat! = 10
+    
     public var shouldMoveUpOnBeginEdit : Bool = true
     
     public required init?(coder aDecoder: NSCoder) {
@@ -156,19 +159,52 @@ public class TtroTextField: UITextField {
         // and the statement returns true; else it returns false
         return string == filtered
     }
+    
+    public func setCurvature(corners : UIRectCorner, radius : CGFloat){
+        self.corners = corners
+        self.radius = radius
+        borderStyle = .none
+    }
+    
+    override public func layoutSubviews() {
+        super.layoutSubviews()
+        if (!corners.isEmpty){
+            let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+            let mask = CAShapeLayer()
+            mask.path = path.cgPath
+            self.layer.mask = mask
+            borderStyle = .none
+        }
+    }
+    
+    let padding = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5);
+    
+    override public func textRect(forBounds bounds: CGRect) -> CGRect {
+        return UIEdgeInsetsInsetRect(bounds, padding)
+    }
+    
+    override public func placeholderRect(forBounds bounds: CGRect) -> CGRect {
+        return UIEdgeInsetsInsetRect(bounds, padding)
+    }
+    
+    override public func editingRect(forBounds bounds: CGRect) -> CGRect {
+        return UIEdgeInsetsInsetRect(bounds, padding)
+    }
 
 }
 
 // MARK : Validation
 extension TtroTextField {
     
-    public func checkValidity() -> Bool{
+    @discardableResult public func checkValidity() -> Bool{
         var state : Bool = true
         switch inputMode {
         case .email:
             state = isValidEmail()
         case .name:
             state = isValidName()
+        case .phoneNumber:
+            state = isValidPhone()
         default:
             break
         }
@@ -192,10 +228,17 @@ extension TtroTextField {
     }
     
     func isValidName() -> Bool {
-        let nameRegEx = "[A-Za-z]{1,30}"
+        let nameRegEx = "[A-Za-z ]{2,30}"
         
         let nameTest = NSPredicate(format:"SELF MATCHES %@", nameRegEx)
         return nameTest.evaluate(with: self.text!)
+    }
+    
+    func isValidPhone() -> Bool {
+        let phoneRegEx = "[0-9]{8,12}"
+        
+        let phoneTest = NSPredicate(format:"SELF MATCHES %@", phoneRegEx)
+        return phoneTest.evaluate(with: self.text!)
     }
 }
 
