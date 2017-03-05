@@ -22,7 +22,7 @@ public class TtroTextField: UITextField {
     }
     
     var _style : Style = .dark
-    var style : Style {
+    public var style : Style {
         get {
             return _style
         }
