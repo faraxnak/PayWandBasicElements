@@ -15,26 +15,32 @@ public class TtroButton: UIButton {
     var mode = TtroMode.flat
     var corners : UIRectCorner! = [.topLeft , .bottomLeft]
     var radius : CGFloat! = 10
+    var color : UIColor = UIColor.TtroColors.cyan.color
+    var highlightColor: UIColor = UIColor.TtroColors.cyan.color
     
     public func setMode(mode: UIButton.TtroMode, font: UIFont = UIFont.TtroPayWandFonts.regular2.font) {
-        setMode(mode, font: font)
+        setMode(mode, font: font, color: color)
         self.mode = mode
     }
     
-    public convenience init(corners : UIRectCorner, radius : CGFloat){
+    public convenience init(corners : UIRectCorner, radius : CGFloat, color: UIColor? = nil, highlightColor: UIColor? = nil){
         self.init()
         self.corners = corners
         self.radius = radius
+        if color != nil {
+            self.color = color!
+        }
+        if highlightColor != nil {
+            self.highlightColor = highlightColor!
+        } else {
+            self.highlightColor = self.color
+        }
     }
     
     public init(){
         super.init(frame: .zero)
-        setTitleColor(UIColor.TtroColors.cyan.color.withAlphaComponent(0.5), for: .highlighted)
+        setTitleColor(color.withAlphaComponent(0.5), for: .highlighted)
     }
-    
-//    public override init(frame: CGRect) {
-//        super.init(frame: frame)
-//    }
     
     public required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -57,11 +63,31 @@ public class TtroButton: UIButton {
             let frameLayer = CAShapeLayer(layer: layer)
             frameLayer.frame = bounds
             frameLayer.path = path.cgPath
-            frameLayer.strokeColor = UIColor.TtroColors.cyan.color.cgColor
+            frameLayer.strokeColor = (state == .highlighted) ? highlightColor.cgColor : color.cgColor
             frameLayer.fillColor = nil
             frameLayer.lineWidth = 2
             layer.addSublayer(frameLayer)
         }
+    }
+    
+    public func setBackgroundColor(_ color: UIColor, for state: UIControlState) {
+        self.setBackgroundImage(imageWithColor(color), for: state)
+    }
+    
+    func imageWithColor(_ color: UIColor) -> UIImage? {
+        let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
+        UIGraphicsBeginImageContext(rect.size)
+        if let context = UIGraphicsGetCurrentContext() {
+            context.setFillColor(color.cgColor)
+            context.fill(rect)
+            if let cgImage = context.makeImage(){
+                UIGraphicsEndImageContext()
+                return UIImage(cgImage: cgImage)
+            }
+            UIGraphicsEndImageContext()
+            return nil
+        }
+        return nil
     }
 }
 
@@ -72,7 +98,7 @@ extension UIButton {
         case backgroundless
         case fullBorder
     }
-    public func setMode(_ mode : TtroMode, font : UIFont = UIFont.TtroPayWandFonts.regular2.font) {
+    public func setMode(_ mode : TtroMode, font : UIFont = UIFont.TtroPayWandFonts.regular2.font, color : UIColor = UIColor.TtroColors.cyan.color) {
         switch mode {
         case .flat:
             layer.cornerRadius = 5
@@ -88,10 +114,10 @@ extension UIButton {
             }
         case .backgroundless:
             titleLabel?.font = font
-            setTitleColor(UIColor.TtroColors.cyan.color, for: UIControlState())
+            setTitleColor(color, for: .normal)
         case .fullBorder:
             titleLabel?.font = font
-            setTitleColor(UIColor.TtroColors.cyan.color, for: UIControlState())
+            setTitleColor(color, for: .normal)
 //            layer.borderColor = UIColor.TtroColors.cyan.color.cgColor
 //            layer.borderWidth = 1
 //            layer.masksToBounds = true

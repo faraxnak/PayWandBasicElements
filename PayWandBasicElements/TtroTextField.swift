@@ -67,7 +67,7 @@ public class TtroTextField: UITextField {
     public enum Style {
         case light
         case dark
-        case readOnly
+//        case readOnly
         case wrongFormat
     }
     
@@ -85,32 +85,20 @@ public class TtroTextField: UITextField {
         switch style {
         case .dark:
             backgroundColor = UIColor.TtroColors.darkBlue.color.withAlphaComponent(0.4)
-            borderStyle = .roundedRect
+            layer.cornerRadius = 5
         case .light:
             backgroundColor = UIColor.white.withAlphaComponent(0.2)
-            borderStyle = .roundedRect
-        case .readOnly:
-            backgroundColor = UIColor.clear
-            borderStyle = .none
+            layer.cornerRadius = 5
         case .wrongFormat:
-            if (style != .readOnly){
-                backgroundColor = UIColor.red.withAlphaComponent(0.4)
-            }
-//            borderStyle = .roundedRect
-//            layer.borderColor = UIColor.red.cgColor
-//            layer.borderWidth = 1
+            backgroundColor = UIColor.red.withAlphaComponent(0.4)
         }
     }
     
-    public func setStyle(_ editable : Bool, isProfileTable : Bool){
-        if (editable){
-            if (isProfileTable){
-                style = .dark
-            } else {
-                style = .light
-            }
+    public func setStyle(isProfileTable : Bool){
+        if (isProfileTable){
+            style = .dark
         } else {
-            style = .readOnly
+            style = .light
         }
     }
     
@@ -164,6 +152,7 @@ public class TtroTextField: UITextField {
         self.corners = corners
         self.radius = radius
         borderStyle = .none
+        layer.cornerRadius = 0
     }
     
     override public func layoutSubviews() {
@@ -174,6 +163,7 @@ public class TtroTextField: UITextField {
             mask.path = path.cgPath
             self.layer.mask = mask
             borderStyle = .none
+            layer.cornerRadius = 0
         }
     }
     
