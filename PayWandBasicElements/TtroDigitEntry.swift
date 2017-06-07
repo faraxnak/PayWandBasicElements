@@ -137,7 +137,7 @@ public class TtroDigitEntry: UITextField, UITextFieldDelegate {
     }
     
     func textChanged(_ notification: Notification){
-        print("edited \(text)")
+        print("edited \(text ?? "")")
         if (text == ""){
             text = defaultChar
             if (previousTextField != nil){

@@ -95,11 +95,11 @@ public class HiglightTextView: UIView {
     
     public override func draw(_ rect: CGRect) {
         super.draw(rect)
-        var frameSetter = CTFramesetterCreateWithAttributedString(text)
-        var framePath = CGMutablePath()
+        let frameSetter = CTFramesetterCreateWithAttributedString(text)
+        let framePath = CGMutablePath()
         framePath.addRect(self.bounds.insetBy(dx: cornerRadius/2, dy: cornerRadius/2))
-        var ctFrame = CTFramesetterCreateFrame(frameSetter, CFRangeMake(0, 0), framePath, nil)
-        var ctx = UIGraphicsGetCurrentContext()!
+        let ctFrame = CTFramesetterCreateFrame(frameSetter, CFRangeMake(0, 0), framePath, nil)
+        let ctx = UIGraphicsGetCurrentContext()!
         ctx.saveGState()
         
         ctx.textMatrix = .identity
@@ -107,7 +107,7 @@ public class HiglightTextView: UIView {
         ctx.scaleBy(x: 1.0, y: -1.0)
         
         
-        var lines : NSArray = CTFrameGetLines(ctFrame)
+        let lines : NSArray = CTFrameGetLines(ctFrame)
         var lineOrigins : [CGPoint] = [CGPoint](repeating: .zero, count : lines.count)
         CTFrameGetLineOrigins(ctFrame, CFRangeMake(0, 0), &lineOrigins)
         
@@ -115,19 +115,19 @@ public class HiglightTextView: UIView {
             let line = lines[lineIndex] as! CTLine
             let lineOrigin = lineOrigins[lineIndex]
             
-            var runs:NSArray = CTLineGetGlyphRuns(line)
+            let runs:NSArray = CTLineGetGlyphRuns(line)
             for run : CTRun in runs as! [CTRun] {
                 let stringRange = CTRunGetStringRange(run)
                 var ascent : CGFloat = 0
                 var descent : CGFloat = 0
                 var leading : CGFloat = 0
                 let typographicBounds = CTRunGetTypographicBounds(run, CFRangeMake(0, 0), &ascent, &descent, &leading)
-                var xOffset : CGFloat = CTLineGetOffsetForStringIndex(line, stringRange.location, nil)
+                let xOffset : CGFloat = CTLineGetOffsetForStringIndex(line, stringRange.location, nil)
                 ctx.textPosition = CGPoint(x: lineOrigin.x + cornerRadius/2 , y: lineOrigin.y + descent)
                 
                 
-                var runBounds = CGRect(x: lineOrigin.x + xOffset , y: lineOrigin.y - cornerRadius/4, width: CGFloat(typographicBounds) + cornerRadius, height: ascent + descent + cornerRadius/2)
-                var attributes:NSDictionary = CTRunGetAttributes(run)
+                let runBounds = CGRect(x: lineOrigin.x + xOffset , y: lineOrigin.y - cornerRadius/4, width: CGFloat(typographicBounds) + cornerRadius, height: ascent + descent + cornerRadius/2)
+                let attributes:NSDictionary = CTRunGetAttributes(run)
                 if let highlightColor = attributes.value(forKey: HiglightTextView.HighLightColorAttribute) as! UIColor? {
                     let path = UIBezierPath(roundedRect: runBounds, cornerRadius: cornerRadius)
                     highlightColor.setFill()
