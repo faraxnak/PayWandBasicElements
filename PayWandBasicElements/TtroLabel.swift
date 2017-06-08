@@ -79,23 +79,35 @@ extension String {
 import CoreGraphics
 import CoreText
 
-public class HiglightTextView: UIView {
+public class HighlightTextView: UIView {
     
     public static let HighLightColorAttribute = "HighLightColorAttribute"
     
-    public var text : NSAttributedString = {
-        var att = [NSFontAttributeName:UIFont(name:"Helvetica", size:14)!]
-        var text = NSMutableAttributedString(string: "normal vs highlited ", attributes:att)
-        text.append(NSAttributedString(string: "Your account is being approved, please be patient", attributes:  [HiglightTextView.HighLightColorAttribute:UIColor.TtroColors.orange.color, NSFontAttributeName:UIFont(name:"Helvetica", size:14)!]))
-        text.append(NSAttributedString(string: " text ", attributes:att))
-        return text
-    }()
+//    public var text : NSAttributedString = {
+//        var att = [NSFontAttributeName:UIFont(name:"Helvetica", size:14)!]
+//        var text = NSMutableAttributedString(string: "normal vs highlited ", attributes:att)
+//        text.append(NSAttributedString(string: "Your account is being approved, please be patient", attributes:  [HighlightTextView.HighLightColorAttribute:UIColor.TtroColors.orange.color, NSFontAttributeName:UIFont(name:"Helvetica", size:14)!]))
+//        text.append(NSAttributedString(string: " text ", attributes:att))
+//        return text
+//    }()
+    
+    var _text : NSAttributedString!
+    
+    public var text : NSAttributedString {
+        get {
+            return _text
+        }
+        set {
+            _text = newValue
+            setNeedsDisplay()
+        }
+    }
     
     public var cornerRadius : CGFloat = 4
     
     public override func draw(_ rect: CGRect) {
         super.draw(rect)
-        let frameSetter = CTFramesetterCreateWithAttributedString(text)
+        let frameSetter = CTFramesetterCreateWithAttributedString(_text)
         let framePath = CGMutablePath()
         framePath.addRect(self.bounds.insetBy(dx: cornerRadius/2, dy: cornerRadius/2))
         let ctFrame = CTFramesetterCreateFrame(frameSetter, CFRangeMake(0, 0), framePath, nil)
@@ -128,7 +140,7 @@ public class HiglightTextView: UIView {
                 
                 let runBounds = CGRect(x: lineOrigin.x + xOffset , y: lineOrigin.y - cornerRadius/4, width: CGFloat(typographicBounds) + cornerRadius, height: ascent + descent + cornerRadius/2)
                 let attributes:NSDictionary = CTRunGetAttributes(run)
-                if let highlightColor = attributes.value(forKey: HiglightTextView.HighLightColorAttribute) as! UIColor? {
+                if let highlightColor = attributes.value(forKey: HighlightTextView.HighLightColorAttribute) as! UIColor? {
                     let path = UIBezierPath(roundedRect: runBounds, cornerRadius: cornerRadius)
                     highlightColor.setFill()
                     path.fill()
