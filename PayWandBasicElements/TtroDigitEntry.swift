@@ -21,7 +21,7 @@ public class TtroDigitEntry: UITextField, UITextFieldDelegate {
     public var nextTextField : TtroDigitEntry?
     public var previousTextField : TtroDigitEntry?
     
-    public var pinDelegate : TtroDigitEntryDelegate!
+    public weak var pinDelegate : TtroDigitEntryDelegate!
     
     public var numOfDigits = 1
     
