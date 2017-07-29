@@ -246,8 +246,12 @@ public class TtroTextView: UITextView, UITextViewDelegate {
     }
     
     public convenience init(placeholder : String, fontSize : CGFloat){
+        self.init(placeholder : placeholder, font: UIFont.TtroFonts.regular(size: fontSize).font)
+    }
+    
+    public convenience init(placeholder : String, font : UIFont){
         self.init(frame: CGRect.zero)
-        font = UIFont.TtroFonts.regular(size: fontSize).font
+        self.font = font
         //borderStyle = .RoundedRect
         layer.cornerRadius = 5
         layer.masksToBounds = true
