@@ -88,7 +88,7 @@ extension UIFont {
     public enum TtroPayWandFonts : TtroFontProtocol {
         case semibold1, semibold2
         case regular1, regular2, regular3, regular4, regular5
-        case light1, light2, light3, light4, light5
+        case light1, light2, light3, light4, light5, light6
         
         fileprivate func getFont() -> UIFont {
             if (DeviceType.IS_IPAD){
@@ -117,6 +117,8 @@ extension UIFont {
                     return TtroFonts.light(size: 30).font
                 case .light5:
                     return TtroFonts.light(size: 36).font
+                case .light6:
+                    return TtroFonts.light(size: 42).font
                 }
             }
             else if (DeviceType.IS_IPHONE_6 || DeviceType.IS_IPHONE_6P) {
@@ -145,6 +147,8 @@ extension UIFont {
                     return TtroFonts.light(size: 28).font
                 case .light5:
                     return TtroFonts.light(size: 34).font
+                case .light6:
+                    return TtroFonts.light(size: 40).font
                 }
             }
             else {
@@ -173,6 +177,8 @@ extension UIFont {
                     return TtroFonts.light(size: 24).font
                 case .light5:
                     return TtroFonts.light(size: 30).font
+                case .light6:
+                    return TtroFonts.light(size: 36).font
                 }
             }
         }
