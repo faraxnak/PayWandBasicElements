@@ -35,6 +35,9 @@ public class TtroTextField: UITextField {
     var corners : UIRectCorner! = []
     var radius : CGFloat! = 10
     
+    var doubleString = ""
+    let maxNumberDecimals = 2
+    
     public var shouldMoveUpOnBeginEdit : Bool = true
     
     public required init?(coder aDecoder: NSCoder) {
@@ -112,7 +115,7 @@ public class TtroTextField: UITextField {
         case .digit:
             inverseSet = CharacterSet(charactersIn:"0123456789").inverted
         case .double:
-            inverseSet = CharacterSet(charactersIn:"0123456789.").inverted
+            inverseSet = CharacterSet(charactersIn:"0123456789".appending(Locale.current.decimalSeparator ?? ".")).inverted
         case .name:
             inverseSet = CharacterSet.letters
             inverseSet.insert(" ")
@@ -137,6 +140,48 @@ public class TtroTextField: UITextField {
             {
                 self.endEditing(true)
             }
+            
+        case .double:
+            let numberFormatter = NumberFormatter()
+            numberFormatter.locale = Locale.current
+            
+            let newRange = getRangeInDoubeString(range: range, inverseSet: inverseSet)
+            let editIndex = doubleString.index(doubleString.startIndex, offsetBy: newRange.location)
+            
+            if filtered != "" {
+                if getDecimalPointDigitCount(amount: numberFormatter.number(from: doubleString)?.doubleValue ?? 0) == maxNumberDecimals { //reached maximum number of decimals
+                    return false
+                }
+                var tmp = doubleString
+                tmp.insert(contentsOf: filtered.characters, at: editIndex)
+                if let amount = numberFormatter.number(from: tmp)?.doubleValue { //(from: doubleString.appending(filtered))?.doubleValue {
+//                    doubleString.append(filtered)
+                    doubleString = tmp
+                    text = getTextAmount(amount: amount)
+                }
+                if filtered == Locale.current.decimalSeparator {
+                    text?.append(filtered)
+                }
+            }
+            else {
+                if (text?.characters.count ?? 0) > 0{
+                    if let char = text?.unicodeScalars.last,
+                        CharacterSet.decimalDigits.contains(char) {
+                        
+                        let deleting = text!.substring(from: text!.index(text!.endIndex, offsetBy: -1))
+                        if let range = doubleString.range(of: deleting, options: String.CompareOptions.backwards, range: nil, locale: nil) {
+                            print(range)
+                            doubleString.removeSubrange(range.lowerBound..<doubleString.endIndex)
+                        }
+                        if let amount = numberFormatter.number(from: doubleString)?.doubleValue {
+                            text = getTextAmount(amount: amount)
+                        } else {
+                            text = ""
+                        }
+                    }
+                }
+            }
+            return false
         default:
             break
         }
@@ -181,6 +226,31 @@ public class TtroTextField: UITextField {
         return UIEdgeInsetsInsetRect(bounds, padding)
     }
 
+    func getDecimalPointDigitCount(amount: Double) -> Int {
+        for i in 0..<maxNumberDecimals {
+            let tmp = amount * pow(10.0, Double(i))
+            if trunc(tmp) == tmp {
+                return i
+            }
+        }
+        return maxNumberDecimals
+    }
+    
+    func getTextAmount(amount: Double) -> String{
+        return String.localizedStringWithFormat("%.\(getDecimalPointDigitCount(amount: amount))f", amount)
+    }
+    
+    func getRangeInDoubeString(range: NSRange, inverseSet: CharacterSet) -> NSRange {
+        if let startIndex = text?.startIndex,
+            let endIndex = text?.index(startIndex, offsetBy: range.location),
+            let subText = text?.substring(with: startIndex..<endIndex){
+            let components = subText.components(separatedBy: inverseSet)
+            var newRange = range
+            newRange.location = range.location - components.count + 1
+            return newRange
+        }
+        return range
+    }
 }
 
 // MARK : Validation
