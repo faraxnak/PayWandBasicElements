@@ -8,6 +8,7 @@
 
 import UIKit
 import UIColor_Hex_Swift
+import PayWandModelProtocols
 
 public protocol TtroColorProtocol {
     var color : UIColor { get }
@@ -507,5 +508,35 @@ extension Double {
     public func rounded(toPlaces places:Int) -> Double {
         let divisor = pow(10.0, Double(places))
         return (self * divisor).rounded() / divisor
+    }
+    
+    public func toString(currency: CurrencyP?) -> String{
+        return String.localizedStringWithFormatForCurrency("%C", currency: currency, self)
+    }
+}
+
+
+extension String {
+    
+    public static func localizedStringWithFormatForCurrency(_ format: String, currency: CurrencyP?,_ arguments: CVarArg...) -> String{
+//        let modifiedFormat = format
+        let string = withVaList(arguments) { (params) -> String in
+            if currency?.title == "IRR" {
+                return NSString(format: format.replacingOccurrences(of: "%C", with: "%.0f"), locale: Locale.current, arguments: params) as String
+//                return String.localizedStringWithFormat(format.replacingOccurrences(of: "%C", with: "%.0f"), params)
+            } else {
+                return NSString(format: format.replacingOccurrences(of: "%C", with: "%.2f"), locale: Locale.current, arguments: params) as String
+//                return String.localizedStringWithFormat(format.replacingOccurrences(of: "%C", with: "%.2f"), params)
+            }
+        }
+        return string
+    }
+    
+    public func widthWithConstrainedWidth(_ height: CGFloat, font: UIFont) -> CGFloat {
+        let constraintRect = CGSize(width: CGFloat.greatestFiniteMagnitude, height: height)
+        
+        let boundingBox = self.boundingRect(with: constraintRect, options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSFontAttributeName: font], context: nil)
+        
+        return boundingBox.width
     }
 }

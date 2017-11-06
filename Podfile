@@ -9,5 +9,6 @@ target 'PayWandBasicElements' do
   pod 'EasyPeasy'
   pod 'SwiftyButton', '~> 0.5.0'
   pod 'UIColor_Hex_Swift'
+  pod 'PayWandModelProtocols', :path => '../PayWandModelProtocols/'
   
 end

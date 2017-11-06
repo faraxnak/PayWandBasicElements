@@ -136,5 +136,6 @@ Pod::Spec.new do |s|
   s.dependency "EasyPeasy", "~> 1.4"
   s.dependency 'SwiftyButton', '~> 0.5.0'
   s.dependency 'UIColor_Hex_Swift'
+  s.dependency 'PayWandModelProtocols'
   
 end

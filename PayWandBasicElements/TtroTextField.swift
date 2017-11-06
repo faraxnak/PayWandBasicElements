@@ -7,9 +7,24 @@
 //
 
 import UIKit
+import PayWandModelProtocols
 
 
 public class TtroTextField: UITextField {
+    
+    fileprivate var _currency : CurrencyP? = nil
+    public var currency : CurrencyP? {
+        get {
+            return _currency
+        } set {
+            if newValue?.title == "IRR" {
+                maxNumberDecimals = 0
+            } else {
+                maxNumberDecimals = 2
+            }
+            _currency = newValue
+        }
+    }
     
     fileprivate var _inputMode = InputMode.all
     public var inputMode : InputMode {
@@ -36,7 +51,7 @@ public class TtroTextField: UITextField {
     var radius : CGFloat! = 10
     
     var doubleString = ""
-    let maxNumberDecimals = 2
+    var maxNumberDecimals = 2
     
     public var shouldMoveUpOnBeginEdit : Bool = true
     
@@ -142,26 +157,30 @@ public class TtroTextField: UITextField {
             }
             
         case .double:
-            let numberFormatter = NumberFormatter()
-            numberFormatter.locale = Locale.current
+            if string != filtered {
+                return false
+            }
             
             let newRange = getRangeInDoubeString(range: range, inverseSet: inverseSet)
             let editIndex = doubleString.index(doubleString.startIndex, offsetBy: newRange.location)
             
             if filtered != "" {
-                if getDecimalPointDigitCount(amount: numberFormatter.number(from: doubleString)?.doubleValue ?? 0) == maxNumberDecimals { //reached maximum number of decimals
+                if maxNumberDecimals > 0,
+                    getDecimalPointDigitCount(amount: getAmount() ?? 0) == maxNumberDecimals { //reached maximum number of decimals
                     return false
                 }
                 var tmp = doubleString
                 tmp.insert(contentsOf: filtered.characters, at: editIndex)
-                if let amount = numberFormatter.number(from: tmp)?.doubleValue { //(from: doubleString.appending(filtered))?.doubleValue {
+                if let amount = getAmount(tmp) { //(from: doubleString.appending(filtered))?.doubleValue {
 //                    doubleString.append(filtered)
                     doubleString = tmp
                     text = getTextAmount(amount: amount)
                 }
-                if filtered == Locale.current.decimalSeparator {
+                if filtered == Locale.current.decimalSeparator,
+                    maxNumberDecimals > 0 {
                     text?.append(filtered)
                 }
+                sendActions(for: .editingChanged)
             }
             else {
                 if (text?.characters.count ?? 0) > 0{
@@ -173,11 +192,12 @@ public class TtroTextField: UITextField {
                             print(range)
                             doubleString.removeSubrange(range.lowerBound..<doubleString.endIndex)
                         }
-                        if let amount = numberFormatter.number(from: doubleString)?.doubleValue {
+                        if let amount = getAmount() {
                             text = getTextAmount(amount: amount)
                         } else {
                             text = ""
                         }
+                        sendActions(for: .editingChanged)
                     }
                 }
             }
@@ -250,6 +270,12 @@ public class TtroTextField: UITextField {
             return newRange
         }
         return range
+    }
+    
+    public func getAmount(_ string: String? = nil) -> Double? {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.locale = Locale.current
+        return numberFormatter.number(from: string ?? doubleString)?.doubleValue
     }
 }
 

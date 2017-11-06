@@ -65,15 +65,6 @@ public class TtroLabel: UILabel {
 
 }
 
-extension String {
-    public func widthWithConstrainedWidth(_ height: CGFloat, font: UIFont) -> CGFloat {
-        let constraintRect = CGSize(width: CGFloat.greatestFiniteMagnitude, height: height)
-        
-        let boundingBox = self.boundingRect(with: constraintRect, options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSFontAttributeName: font], context: nil)
-        
-        return boundingBox.width
-    }
-}
 
 
 import CoreGraphics
