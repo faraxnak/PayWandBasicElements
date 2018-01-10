@@ -130,7 +130,7 @@ public class TtroTextField: UITextField {
         case .digit:
             inverseSet = CharacterSet(charactersIn:"0123456789").inverted
         case .double:
-            inverseSet = CharacterSet(charactersIn:"0123456789".appending(Locale.current.decimalSeparator ?? ".")).inverted
+            inverseSet = CharacterSet(charactersIn:"0123456789".appending(Locale.current.decimalSeparator ?? "")).inverted
         case .name:
             inverseSet = CharacterSet.letters
             inverseSet.insert(" ")
@@ -160,8 +160,14 @@ public class TtroTextField: UITextField {
             if string != filtered {
                 return false
             }
+            if let seperator = Locale.current.decimalSeparator {
+                if string.contains(seperator) &&
+                    text!.contains(seperator){
+                    return false
+                }
+            }
             
-            let newRange = getRangeInDoubeString(range: range, inverseSet: inverseSet)
+            let newRange = getRangeInDoubleString(range: range, inverseSet: inverseSet)
             let editIndex = doubleString.index(doubleString.startIndex, offsetBy: newRange.location)
             
             if filtered != "" {
@@ -260,7 +266,7 @@ public class TtroTextField: UITextField {
         return String.localizedStringWithFormat("%.\(getDecimalPointDigitCount(amount: amount))f", amount)
     }
     
-    func getRangeInDoubeString(range: NSRange, inverseSet: CharacterSet) -> NSRange {
+    func getRangeInDoubleString(range: NSRange, inverseSet: CharacterSet) -> NSRange {
         if let startIndex = text?.startIndex,
             let endIndex = text?.index(startIndex, offsetBy: range.location),
             let subText = text?.substring(with: startIndex..<endIndex){
@@ -276,6 +282,15 @@ public class TtroTextField: UITextField {
         let numberFormatter = NumberFormatter()
         numberFormatter.locale = Locale.current
         return numberFormatter.number(from: string ?? doubleString)?.doubleValue
+    }
+    
+    public func setAmount(amount : Double) {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.locale = Locale.current
+        if let s = numberFormatter.string(from: NSNumber(value: amount)) {
+            doubleString = s
+            text = getTextAmount(amount: amount)
+        }
     }
 }
 
