@@ -32,7 +32,10 @@ public class TtroDigitEntry: UITextField, UITextFieldDelegate {
         case dark
     }
     
-    public convenience init(next : TtroDigitEntry?, previous : TtroDigitEntry?, defaultChar : String = "_", mode : Mode = .light){
+    public var plainText : String? = ""
+    public var shouldHideText = false
+    
+    public convenience init(next : TtroDigitEntry?, previous : TtroDigitEntry?, defaultChar : String = "_", mode : Mode = .light, shouldHideText : Bool = false){
         self.init(frame : CGRect.zero)
         self.nextTextField = next
         self.previousTextField = previous
@@ -55,6 +58,7 @@ public class TtroDigitEntry: UITextField, UITextFieldDelegate {
         font = UIFont.TtroFonts.regular(size: 20).font
         text = defaultChar
         self.defaultChar = defaultChar
+        self.shouldHideText = shouldHideText
     }
     
     public override init(frame: CGRect) {
@@ -109,6 +113,7 @@ public class TtroDigitEntry: UITextField, UITextFieldDelegate {
             pinDelegate.onClearText?()
         }
         //print("here \(text)")
+        
         return true
     }
     
@@ -125,6 +130,11 @@ public class TtroDigitEntry: UITextField, UITextFieldDelegate {
     }
     
     public func textFieldDidEndEditing(_ textField: UITextField) {
+        if (shouldHideText && text != defaultChar){
+            plainText = textField.text
+            let charArray: Array<Character> = Array(repeating: "●", count: numOfDigits)
+            text = String(charArray)
+        }
          pinDelegate.textFieldDidEndEditing?(textField)
     }
     
