@@ -107,8 +107,10 @@ extension UIButton {
             setTitleColor(UIColor.TtroColors.darkBlue.color, for: UIControlState())
             //titleLabel?.addObserver(self, forKeyPath: "text", options: [.Old, .New], context: nil)
         case .pressable:
-            if let sButton = self as? SwiftyButton {
-                sButton.shadowColor  = UIColor.TtroColors.darkBlue.color.withAlphaComponent(0.5)
+            if let sButton = self as? PressableButton {
+                //sButton.shadowColor  = UIColor.TtroColors.darkBlue.color.withAlphaComponent(0.5)
+                sButton.colors = .init(button: UIColor.TtroColors.darkBlue.color,
+                                       shadow: UIColor.TtroColors.darkBlue.color.withAlphaComponent(0.5))
                 sButton.shadowHeight = 2
                 sButton.cornerRadius = 5
             }

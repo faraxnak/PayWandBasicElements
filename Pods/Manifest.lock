@@ -1,17 +1,13 @@
 PODS:
   - EasyPeasy (1.4)
   - PayWandModelProtocols (0.0.2)
-  - PureLayout (3.0.2)
-  - SwiftyButton (0.5.0):
-    - SwiftyButton/CustomContent (= 0.5.0)
-  - SwiftyButton/CustomContent (0.5.0):
-    - PureLayout (~> 3.0)
+  - SwiftyButton (0.8.0)
   - UIColor_Hex_Swift (3.0.2)
 
 DEPENDENCIES:
   - EasyPeasy
   - PayWandModelProtocols (from `../PayWandModelProtocols/`)
-  - SwiftyButton (~> 0.5.0)
+  - SwiftyButton (~> 0.8.0)
   - UIColor_Hex_Swift
 
 EXTERNAL SOURCES:
@@ -20,11 +16,10 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   EasyPeasy: c2e49ceb822edc0a5fffefd66240fff10129047d
-  PayWandModelProtocols: 9157e858d698bd01b706bd051444bd345918cd31
-  PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
-  SwiftyButton: 7f1c7774a0aa721cbb6ea287742198ea0ee50c05
+  PayWandModelProtocols: 76f0a4a7eb73f793dd6a59b362ff392d52bdd084
+  SwiftyButton: 093e3fe2becf3ae31c0f6c1c6987b79a93fb3ecb
   UIColor_Hex_Swift: 95f718452092a3efc8a827dffd2c04d3237be02d
 
-PODFILE CHECKSUM: 405a9a471f2b180d5cc34270130bdaa2313a9bd0
+PODFILE CHECKSUM: 99e1197a7d4d3bba5c23fc31f478a02f4cd74503
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.4.0
