@@ -168,13 +168,14 @@ public class TtroTextField: UITextField {
             }
             
             let newRange = getRangeInDoubleString(range: range, inverseSet: inverseSet)
-            let editIndex = doubleString.index(doubleString.startIndex, offsetBy: newRange.location)
+            
             
             if filtered != "" {
                 if maxNumberDecimals > 0,
                     getDecimalPointDigitCount(amount: getAmount() ?? 0) == maxNumberDecimals { //reached maximum number of decimals
                     return false
                 }
+                let editIndex = doubleString.index(doubleString.startIndex, offsetBy: newRange.location)
                 var tmp = doubleString
                 tmp.insert(contentsOf: filtered.characters, at: editIndex)
                 if let amount = getAmount(tmp) { //(from: doubleString.appending(filtered))?.doubleValue {
@@ -287,6 +288,8 @@ public class TtroTextField: UITextField {
     public func setAmount(amount : Double) {
         let numberFormatter = NumberFormatter()
         numberFormatter.locale = Locale.current
+        numberFormatter.allowsFloats = true
+        numberFormatter.maximumFractionDigits = maxNumberDecimals
         if let s = numberFormatter.string(from: NSNumber(value: amount)) {
             doubleString = s
             text = getTextAmount(amount: amount)
