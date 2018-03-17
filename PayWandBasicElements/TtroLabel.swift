@@ -126,11 +126,11 @@ public class HighlightTextView: UIView {
                 var leading : CGFloat = 0
                 let typographicBounds = CTRunGetTypographicBounds(run, CFRangeMake(0, 0), &ascent, &descent, &leading)
                 let xOffset : CGFloat = CTLineGetOffsetForStringIndex(line, stringRange.location, nil)
-                ctx.textPosition = CGPoint(x: lineOrigin.x + cornerRadius/2 , y: lineOrigin.y + descent)
+                ctx.textPosition = CGPoint(x: lineOrigin.x + cornerRadius/2 , y: lineOrigin.y + descent - 5)
                 
                 
-                let runBounds = CGRect(x: lineOrigin.x + xOffset , y: lineOrigin.y - cornerRadius/4, width: CGFloat(typographicBounds) + cornerRadius, height: ascent + descent + cornerRadius/2)
-                let attributes:NSDictionary = CTRunGetAttributes(run)
+                let runBounds = CGRect(x: lineOrigin.x + xOffset , y: lineOrigin.y - cornerRadius/4 - 5, width: CGFloat(typographicBounds) + cornerRadius, height: ascent + descent + cornerRadius/2)
+                let attributes: NSDictionary = CTRunGetAttributes(run)
                 if let highlightColor = attributes.value(forKey: HighlightTextView.HighLightColorAttribute) as! UIColor? {
                     let path = UIBezierPath(roundedRect: runBounds, cornerRadius: cornerRadius)
                     highlightColor.setFill()

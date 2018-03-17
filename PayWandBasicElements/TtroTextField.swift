@@ -80,6 +80,7 @@ public class TtroTextField: UITextField {
         attributedPlaceholder = NSAttributedString(string:placeholder, attributes:[NSForegroundColorAttributeName: UIColor.TtroColors.white.color.withAlphaComponent(0.5)])
         translatesAutoresizingMaskIntoConstraints = false
         tintColor = UIColor.TtroColors.white.color
+        autocorrectionType = .no
     }
     
     public enum Style {
@@ -175,11 +176,16 @@ public class TtroTextField: UITextField {
                     getDecimalPointDigitCount(amount: getAmount() ?? 0) == maxNumberDecimals { //reached maximum number of decimals
                     return false
                 }
-                let editIndex = doubleString.index(doubleString.startIndex, offsetBy: newRange.location)
-                var tmp = doubleString
-                tmp.insert(contentsOf: filtered.characters, at: editIndex)
-                if let amount = getAmount(tmp) { //(from: doubleString.appending(filtered))?.doubleValue {
-//                    doubleString.append(filtered)
+                
+                var tmp = ""
+                if getAmount(doubleString) == 0 {
+                    tmp = filtered
+                } else {
+                    let editIndex = doubleString.index(doubleString.startIndex, offsetBy: newRange.location)
+                    tmp = doubleString
+                    tmp.insert(contentsOf: filtered, at: editIndex)
+                }
+                if let amount = getAmount(tmp) {
                     doubleString = tmp
                     text = getTextAmount(amount: amount)
                 }
@@ -190,7 +196,7 @@ public class TtroTextField: UITextField {
                 sendActions(for: .editingChanged)
             }
             else {
-                if (text?.characters.count ?? 0) > 0{
+                if (text?.count ?? 0) > 0{
                     if let char = text?.unicodeScalars.last,
                         CharacterSet.decimalDigits.contains(char) {
                         
