@@ -190,11 +190,11 @@ extension UIButton {
         //imageView?.translatesAutoresizingMaskIntoConstraints = false
         imageView?.contentMode = .scaleAspectFit
         imageView?.removeConstraints(imageView!.constraints)
-        imageView! <- [
+        imageView!.easy.layout([
             Right(0).to(titleLabel!, .left),
             Top(7.5),
             Bottom(7.5)
-        ]
+        ])
         
 //        let dummyView = UIView()
 //        dummyView.translatesAutoresizingMaskIntoConstraints = false

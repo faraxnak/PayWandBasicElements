@@ -477,7 +477,7 @@ public extension CALayer {
     }
 }
 
-extension UIScrollView {
+public extension UIScrollView {
     
     // Scroll to a specific view so that it's top is at the top our scrollview
     public func scrollToView(view:UIView, animated: Bool) {
@@ -503,7 +503,7 @@ extension UIScrollView {
     
 }
 
-extension Double {
+public extension Double {
     /// Rounds the double to decimal places value
     public func rounded(toPlaces places:Int) -> Double {
         let divisor = pow(10.0, Double(places))
@@ -516,7 +516,7 @@ extension Double {
 }
 
 
-extension String {
+public extension String {
     
     public static func localizedStringWithFormatForCurrency(_ format: String, currency: CurrencyP?,_ arguments: CVarArg...) -> String{
 //        let modifiedFormat = format
@@ -538,5 +538,49 @@ extension String {
         let boundingBox = self.boundingRect(with: constraintRect, options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSFontAttributeName: font], context: nil)
         
         return boundingBox.width
+    }
+}
+
+public extension Collection {
+    
+    /// Returns the element at the specified index iff it is within bounds, otherwise nil.
+    subscript (safe index: Index) -> Element? {
+        return indices.contains(index) ? self[index] : nil
+    }
+}
+
+public extension UIImage {
+    func rotated(by rotationAngle: Measurement<UnitAngle>, options: RotationOptions = []) -> UIImage? {
+        guard let cgImage = cgImage else { return nil }
+        
+        let rotationInRadians = CGFloat(rotationAngle.converted(to: .radians).value)
+        let transform = CGAffineTransform(rotationAngle: rotationInRadians)
+        var rect = CGRect(origin: .zero, size: size).applying(transform)
+        rect.origin = .zero
+        
+        let renderer = UIGraphicsImageRenderer(size: rect.size)
+        return renderer.image { renderContext in
+            renderContext.cgContext.translateBy(x: rect.midX, y: rect.midY)
+            renderContext.cgContext.rotate(by: rotationInRadians)
+            
+            let x = options.contains(.flipOnVerticalAxis) ? -1.0 : 1.0
+            let y = options.contains(.flipOnHorizontalAxis) ? 1.0 : -1.0
+            renderContext.cgContext.scaleBy(x: CGFloat(x), y: CGFloat(y))
+            
+            let drawRect = CGRect(origin: CGPoint(x: -size.width/2, y: -size.height/2), size: size)
+            renderContext.cgContext.draw(cgImage, in: drawRect)
+        }
+    }
+    
+    func resize(newWidth: CGFloat) -> UIImage {
+        
+        let scale = newWidth / size.width
+        let newHeight = size.height * scale
+        UIGraphicsBeginImageContext(CGSize(width: newWidth, height: newHeight))
+        draw(in: CGRect(x: 0, y: 0, width: newWidth, height: newHeight))
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return newImage!
     }
 }

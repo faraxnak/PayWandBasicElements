@@ -81,6 +81,12 @@ public class TtroTextField: UITextField {
         translatesAutoresizingMaskIntoConstraints = false
         tintColor = UIColor.TtroColors.white.color
         autocorrectionType = .no
+        
+        /// validity check view
+        rightView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: 100))
+        rightView?.backgroundColor = UIColor.TtroColors.red.color.withAlphaComponent(0.8)
+        leftView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: 100))
+        leftView?.backgroundColor = UIColor.TtroColors.red.color.withAlphaComponent(0.8)
     }
     
     public enum Style {
@@ -101,6 +107,8 @@ public class TtroTextField: UITextField {
     }
     
     public func setStyle(_ style : Style){
+        leftViewMode = .never
+        rightViewMode = .never
         switch style {
         case .dark:
             backgroundColor = UIColor.TtroColors.darkBlue.color.withAlphaComponent(0.4)
@@ -109,7 +117,12 @@ public class TtroTextField: UITextField {
             backgroundColor = UIColor.white.withAlphaComponent(0.2)
             layer.cornerRadius = 5
         case .wrongFormat:
-            backgroundColor = UIColor.red.withAlphaComponent(0.4)
+//            backgroundColor = UIColor.red.withAlphaComponent(0.4)
+            if textAlignment == .right {
+                leftViewMode = .unlessEditing
+            } else {
+                rightViewMode = .unlessEditing
+            }
         }
     }
     
@@ -152,7 +165,7 @@ public class TtroTextField: UITextField {
         
         switch _inputMode {
         case .phoneNumber:
-            if ((text!.characters.count) == 13 && string != "")
+            if ((text!.count) == 13 && string != "")
             {
                 self.endEditing(true)
             }
@@ -307,23 +320,23 @@ public class TtroTextField: UITextField {
 extension TtroTextField {
     
     @discardableResult public func checkValidity() -> Bool{
-        var state : Bool = true
+        var isValid : Bool = true
         switch inputMode {
         case .email:
-            state = isValidEmail()
+            isValid = isValidEmail()
         case .name:
-            state = isValidName()
+            isValid = isValidName()
         case .phoneNumber:
-            state = isValidPhone()
+            isValid = isValidPhone()
         default:
             break
         }
-        if (!state) {
+        if (!isValid) {
             setStyle(.wrongFormat)
         } else {
             setStyle(style)
         }
-        return state
+        return isValid
     }
     
     public func setToNormalState(){

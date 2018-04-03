@@ -92,7 +92,7 @@ public class TtroDigitEntry: UITextField, UITextFieldDelegate {
         if (string != ""){
             if (text == defaultChar){
                 text = ""
-            } else if text?.characters.count == numOfDigits {
+            } else if text?.count == numOfDigits {
                 if (nextTextField != nil){
                     nextTextField?.text = ""
                     nextTextField?.becomeFirstResponder()
@@ -153,7 +153,7 @@ public class TtroDigitEntry: UITextField, UITextFieldDelegate {
             if (previousTextField != nil){
                 previousTextField!.becomeFirstResponder()
             }
-        } else if (text?.characters.count == numOfDigits) {
+        } else if (text?.count == numOfDigits) {
             if (nextTextField == nil){
                 endEditing(false)
                 pinDelegate.pinCompleted?()
