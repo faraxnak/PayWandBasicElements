@@ -18,8 +18,8 @@ public class TtroButton: UIButton {
     var color : UIColor = UIColor.TtroColors.cyan.color
     var highlightColor: UIColor = UIColor.TtroColors.cyan.color
     
-    public func setMode(mode: UIButton.TtroMode, font: UIFont = UIFont.TtroPayWandFonts.regular2.font) {
-        setMode(mode, font: font, color: color)
+    public func setMode(_ mode: UIButton.TtroMode, font: UIFont = UIFont.TtroPayWandFonts.regular2.font) {
+        super.setMode(mode, font: font, color: color)
         self.mode = mode
     }
     

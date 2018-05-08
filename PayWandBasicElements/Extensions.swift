@@ -204,6 +204,7 @@ public struct DeviceType
     public static let IS_IPHONE_5          = UIDevice.current.userInterfaceIdiom == .phone && ScreenSize.SCREEN_MAX_LENGTH == 568.0
     public static let IS_IPHONE_6          = UIDevice.current.userInterfaceIdiom == .phone && ScreenSize.SCREEN_MAX_LENGTH == 667.0
     public static let IS_IPHONE_6P         = UIDevice.current.userInterfaceIdiom == .phone && ScreenSize.SCREEN_MAX_LENGTH == 736.0
+    public static let IS_IPHONE_X          = UIDevice.current.userInterfaceIdiom == .phone && ScreenSize.SCREEN_MAX_LENGTH > 800.0
     public static let IS_IPAD              = UIDevice.current.userInterfaceIdiom == .pad || ScreenSize.SCREEN_MAX_LENGTH == 1024.0
 }
 
@@ -544,7 +545,7 @@ public extension String {
 public extension Collection {
     
     /// Returns the element at the specified index iff it is within bounds, otherwise nil.
-    subscript (safe index: Index) -> Element? {
+    subscript (safee index: Index) -> Element? {
         return indices.contains(index) ? self[index] : nil
     }
 }
