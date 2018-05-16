@@ -1,5 +1,5 @@
 PODS:
-  - EasyPeasy (1.4)
+  - EasyPeasy (1.7.0)
   - PayWandModelProtocols (0.0.2)
   - SwiftyButton (0.8.0)
   - UIColor_Hex_Swift (3.0.2)
@@ -21,7 +21,7 @@ EXTERNAL SOURCES:
     :path: "../PayWandModelProtocols/"
 
 SPEC CHECKSUMS:
-  EasyPeasy: c2e49ceb822edc0a5fffefd66240fff10129047d
+  EasyPeasy: 2f2785ed78c6f9e9045221f2ff317730e7321bff
   PayWandModelProtocols: 76f0a4a7eb73f793dd6a59b362ff392d52bdd084
   SwiftyButton: 093e3fe2becf3ae31c0f6c1c6987b79a93fb3ecb
   UIColor_Hex_Swift: 95f718452092a3efc8a827dffd2c04d3237be02d

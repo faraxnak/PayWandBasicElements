@@ -146,7 +146,7 @@ public class TtroDigitEntry: UITextField, UITextFieldDelegate {
         pinDelegate.textFieldDidBeginEditing?(textField)
     }
     
-    func textChanged(_ notification: Notification){
+    @objc func textChanged(_ notification: Notification){
         print("edited \(text ?? "")")
         if (text == ""){
             text = defaultChar

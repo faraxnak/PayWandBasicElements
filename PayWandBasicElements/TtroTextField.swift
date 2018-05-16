@@ -77,7 +77,7 @@ public class TtroTextField: UITextField {
 //        backgroundColor = UIColor.white.withAlphaComponent(0.2)
         style = .light
         textColor = UIColor.TtroColors.white.color
-        attributedPlaceholder = NSAttributedString(string:placeholder, attributes:[NSForegroundColorAttributeName: UIColor.TtroColors.white.color.withAlphaComponent(0.5)])
+        attributedPlaceholder = NSAttributedString(string:placeholder, attributes:[NSAttributedStringKey.foregroundColor: UIColor.TtroColors.white.color.withAlphaComponent(0.5)])
         translatesAutoresizingMaskIntoConstraints = false
         tintColor = UIColor.TtroColors.white.color
         autocorrectionType = .no

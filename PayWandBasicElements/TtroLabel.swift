@@ -70,9 +70,14 @@ public class TtroLabel: UILabel {
 import CoreGraphics
 import CoreText
 
+//extension NSAttributedStringKey {
+//
+//}
+
 public class HighlightTextView: UIView {
     
     public static let HighLightColorAttribute = "HighLightColorAttribute"
+    public static let highlightColorAttribute : NSAttributedStringKey = NSAttributedStringKey(rawValue: "HighLightColorAttribute")
     
 //    public var text : NSAttributedString = {
 //        var att = [NSFontAttributeName:UIFont(name:"Helvetica", size:14)!]

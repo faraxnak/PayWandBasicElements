@@ -380,7 +380,7 @@ class CAAnimationDelegateModified: NSObject, CAAnimationDelegate {
      
      - parameter timer: timer
      */
-    func animationIsAnimating(_ timer: Timer) {
+    @objc func animationIsAnimating(_ timer: Timer) {
         let progress = CGFloat(Date().timeIntervalSince(startTime) / animationDuration)
         if progress <= 1.0 {
             animating?(progress)
@@ -536,7 +536,7 @@ public extension String {
     public func widthWithConstrainedWidth(_ height: CGFloat, font: UIFont) -> CGFloat {
         let constraintRect = CGSize(width: CGFloat.greatestFiniteMagnitude, height: height)
         
-        let boundingBox = self.boundingRect(with: constraintRect, options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSFontAttributeName: font], context: nil)
+        let boundingBox = self.boundingRect(with: constraintRect, options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font: font], context: nil)
         
         return boundingBox.width
     }
