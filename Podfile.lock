@@ -10,9 +10,15 @@ DEPENDENCIES:
   - SwiftyButton (~> 0.8.0)
   - UIColor_Hex_Swift
 
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - EasyPeasy
+    - SwiftyButton
+    - UIColor_Hex_Swift
+
 EXTERNAL SOURCES:
   PayWandModelProtocols:
-    :path: ../PayWandModelProtocols/
+    :path: "../PayWandModelProtocols/"
 
 SPEC CHECKSUMS:
   EasyPeasy: c2e49ceb822edc0a5fffefd66240fff10129047d
@@ -22,4 +28,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 99e1197a7d4d3bba5c23fc31f478a02f4cd74503
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.0

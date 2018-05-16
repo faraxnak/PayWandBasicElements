@@ -12,10 +12,10 @@
 		0E4D484CDC66423F39D398ED28B9A37F /* DimensionAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F113366FDF54E6C1EC5857FF12DE113 /* DimensionAttribute.swift */; };
 		1D2FF4D810821FA697B82E9BE08B029F /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF9E7F9B803DA719E04F06E6CC076F5 /* Item.swift */; };
 		1F98403FA7386FBD5C04706DA198E178 /* PositionAttribute+AppKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F74FA7550C4039E13312DE1CCA2ECF /* PositionAttribute+AppKit.swift */; };
-		238EDC1AB26BE7C697EF58F21B949C88 /* EasyPeasy-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CDE35662D35BC50723130437E148AAD /* EasyPeasy-dummy.m */; };
+		238EDC1AB26BE7C697EF58F21B949C88 /* EasyPeasy-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A2D2DB477D964DA69B391FE501E14F /* EasyPeasy-dummy.m */; };
 		24A8B73E4DA9132A2B15A20FA8E8D06A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
 		31F60DBB6662B43BB7182A94B1063E40 /* CompoundAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646E062539AAEF19883E5F247AE501DC /* CompoundAttribute.swift */; };
-		32A5CF7C9046F0D677E1D6DFF66EF549 /* EasyPeasy-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 14E0D72F7F139D01C9DAFF6AB6537815 /* EasyPeasy-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		32A5CF7C9046F0D677E1D6DFF66EF549 /* EasyPeasy-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D9D07CD76A93847977AFD3643ACFCB41 /* EasyPeasy-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3474E4E655382B527D799C55021A3567 /* Attribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FE10A25F34A541453ED984A6C92B6C /* Attribute.swift */; };
 		42DDC034671649DDD83A834774825CBB /* PositionAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE45A3261D8BF5A991F80195162D5A3B /* PositionAttribute.swift */; };
 		42F05C7EE3057F7CEA920DD6B4E4100B /* ServerDataProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF46C2E011FA0C98B4B6353D70B0AA8 /* ServerDataProtocols.swift */; };
@@ -26,27 +26,27 @@
 		584B53C655CCC4AF7C7F44A174D34F40 /* DimensionAttribute+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A5ADCDD99B52A00D9924F1A9DA4F47 /* DimensionAttribute+UIKit.swift */; };
 		5EBAD79130946E6B3B1049CA94E2DDC8 /* CoreDataProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C6728110F13647A6639CD0AD7AF8B6 /* CoreDataProtocols.swift */; };
 		61D4F2FFD1C5E3172A80A4E4B5B3B790 /* FlatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED27EC8FBF769EFCDE2C1214BA072429 /* FlatButton.swift */; };
-		66FFD6470B84E8606BAFDC4721A42A57 /* PayWandModelProtocols-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 52DD5D74784969D07DE35CAE47D6AA68 /* PayWandModelProtocols-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		66FFD6470B84E8606BAFDC4721A42A57 /* PayWandModelProtocols-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 833E356EE55325AFB4346F24CF0B7F84 /* PayWandModelProtocols-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74F60C3DCB1FFCEE968D8345F676700E /* HEXColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 74A6170A08297FD43110238680E539B9 /* HEXColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		753AA53F5DF69E2D3A59BFD141119A65 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F41813989BBD35C8F91F4F6A32398F3 /* Utils.swift */; };
-		7614E68936C2DD40CB711B510722F43B /* Pods-PayWandBasicElements-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 77448809693CD07873933F71CF22320C /* Pods-PayWandBasicElements-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7CE4D210CEAE6B9282118587381166FA /* UIColor_Hex_Swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AD24D20E6A53484BFFD2D3E29CCF6461 /* UIColor_Hex_Swift-dummy.m */; };
+		7614E68936C2DD40CB711B510722F43B /* Pods-PayWandBasicElements-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D345D135E6C1891CF85779037E50BE6 /* Pods-PayWandBasicElements-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7CE4D210CEAE6B9282118587381166FA /* UIColor_Hex_Swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CCB34238D96F6D1B41200CD6B9D9ABFE /* UIColor_Hex_Swift-dummy.m */; };
 		7FD80237B2B9D85C9B5FAA2B95DADF7F /* ReferenceAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14379BA8EB59C9B5438D2D354DE79183 /* ReferenceAttribute.swift */; };
 		876F360BD30518F61D9BE938F9464994 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF578D106959F531655EBE2C2AD54C5 /* UIColorExtension.swift */; };
-		8B24E7EAA1DBB1EEC6E658CE4D6D3D89 /* UIColor_Hex_Swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 251236EBD0C63D0A4A529A532C9AB713 /* UIColor_Hex_Swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B24E7EAA1DBB1EEC6E658CE4D6D3D89 /* UIColor_Hex_Swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D1F4573CFEA69063C7249E8B529275A4 /* UIColor_Hex_Swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8E0E660019420B111D1B730A20D55AAE /* UILayoutGuide+Easy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039E96833852AA2FEEE13FB995ADF26A /* UILayoutGuide+Easy.swift */; };
 		9053EBA2CB510BFE30A7B32C12B8070E /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C6C0F297144E97DBDA727873CF2895 /* Node.swift */; };
 		9D5800496526AA7608455476C53AE0A6 /* Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5CCA9D96C8DA5F057FDA51BFA243B9 /* Priority.swift */; };
 		A0C2124BD3AE47D8B7CCE6D95C02FC31 /* PressableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A916D6DFBABBA00916ECB9E7FBE63DF1 /* PressableButton.swift */; };
 		A3506A6DC95B8BBDDA6D0899DC112417 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
-		B75DEC037FE5108E49FBE75D43BC33FC /* PayWandModelProtocols-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B945C17E48AA4035970BAE30F2A5534F /* PayWandModelProtocols-dummy.m */; };
+		B75DEC037FE5108E49FBE75D43BC33FC /* PayWandModelProtocols-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CC6C2043AD6EAFC2C1AA847E738B203 /* PayWandModelProtocols-dummy.m */; };
 		BBDD5A2F124A7538D60BFC9B9B91C0EB /* DimensionAttribute+AppKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F533198998F926A0F82E33917C66C1D /* DimensionAttribute+AppKit.swift */; };
 		BC5AB76802C3AF039CFB6102E2E89AD7 /* Item+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D45FC776B02F64CA909F71A368EDE7 /* Item+UIKit.swift */; };
-		BD60BAF575A9FD33CBFC7C3A66E07049 /* SwiftyButton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6A0B87EE4EDC629E54816E41487E47 /* SwiftyButton-dummy.m */; };
-		BF56EE36411AA5EFDC25BAEBE6805970 /* Pods-PayWandBasicElements-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A19FF212D5A2DBF341D09CF5D73A89E1 /* Pods-PayWandBasicElements-dummy.m */; };
+		BD60BAF575A9FD33CBFC7C3A66E07049 /* SwiftyButton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 00BE56BAEE5F7F5E966E4D122B2B158B /* SwiftyButton-dummy.m */; };
+		BF56EE36411AA5EFDC25BAEBE6805970 /* Pods-PayWandBasicElements-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F27E4513E62F4AE310AF56B8424B88B /* Pods-PayWandBasicElements-dummy.m */; };
 		C31E0E1C6075D0EBECFA879D830B3B44 /* CustomPressableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DF75238DB625DDB8322E14C2F7B667 /* CustomPressableButton.swift */; };
 		C3F1CF25A547A3761DD89DB494CECF60 /* NSLayoutGuide+Easy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5602D3EB04F49709261F7647F09C2FF /* NSLayoutGuide+Easy.swift */; };
-		C94B65F56BA42535CDB0435B8AA94417 /* SwiftyButton-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ED64BB8394637686542A312703B5F996 /* SwiftyButton-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C94B65F56BA42535CDB0435B8AA94417 /* SwiftyButton-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ACE576B9344FCB9B8272CD590480938B /* SwiftyButton-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB4913DC04AD378FC6D2354E48534B7A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
 		CCF8C5BDA51404F535B734C8FD7A5B0D /* PositionAttribute+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F09B51B2D4A4B17088C4C0C5D97DE4 /* PositionAttribute+UIKit.swift */; };
 		CD0C3FFA2B96915057F38689171990AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
@@ -86,77 +86,77 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0002BE4394A060AF8BA979240D272B74 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00BE56BAEE5F7F5E966E4D122B2B158B /* SwiftyButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyButton-dummy.m"; sourceTree = "<group>"; };
 		039E96833852AA2FEEE13FB995ADF26A /* UILayoutGuide+Easy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UILayoutGuide+Easy.swift"; path = "EasyPeasy/UILayoutGuide+Easy.swift"; sourceTree = "<group>"; };
-		04C80D0AEDDA916D52634054B43A7BDD /* PayWandModelProtocols-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PayWandModelProtocols-prefix.pch"; sourceTree = "<group>"; };
+		06D93F709B097A850E40B4A4DDAFD4BC /* UIColor_Hex_Swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UIColor_Hex_Swift.xcconfig; sourceTree = "<group>"; };
 		092600EDD69005BD20DC1AD4DD750156 /* UIColor_Hex_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = UIColor_Hex_Swift.framework; path = UIColor_Hex_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		09A5C5050F63BA763B401774C36568B7 /* PayWandModelProtocols.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = PayWandModelProtocols.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		0AB27D9DAB18B4406F5861EE1352842C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0BF46C2E011FA0C98B4B6353D70B0AA8 /* ServerDataProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerDataProtocols.swift; path = PayWandModelProtocols/ServerDataProtocols.swift; sourceTree = "<group>"; };
+		0F6C169132D6647E0AFABC55BE98852D /* UIColor_Hex_Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = UIColor_Hex_Swift.modulemap; sourceTree = "<group>"; };
 		14379BA8EB59C9B5438D2D354DE79183 /* ReferenceAttribute.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReferenceAttribute.swift; path = EasyPeasy/ReferenceAttribute.swift; sourceTree = "<group>"; };
-		14E0D72F7F139D01C9DAFF6AB6537815 /* EasyPeasy-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EasyPeasy-umbrella.h"; sourceTree = "<group>"; };
-		180F228A3E521A0DBB4FAE573343D0DE /* PayWandModelProtocols.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = PayWandModelProtocols.modulemap; sourceTree = "<group>"; };
-		18E812419CF03F46FA66F5A48999ACF8 /* Pods-PayWandBasicElements.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PayWandBasicElements.debug.xcconfig"; sourceTree = "<group>"; };
-		1E6A0B87EE4EDC629E54816E41487E47 /* SwiftyButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyButton-dummy.m"; sourceTree = "<group>"; };
-		251236EBD0C63D0A4A529A532C9AB713 /* UIColor_Hex_Swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIColor_Hex_Swift-umbrella.h"; sourceTree = "<group>"; };
-		25228FA5D76A8D6E4197811BF7D17AFC /* EasyPeasy.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = EasyPeasy.modulemap; sourceTree = "<group>"; };
+		379A06F51C86D751C09DE8B98B6BA06A /* Pods-PayWandBasicElements.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PayWandBasicElements.modulemap"; sourceTree = "<group>"; };
 		380787BD288B65F01E07088039819A6C /* NSView+Easy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSView+Easy.swift"; path = "EasyPeasy/NSView+Easy.swift"; sourceTree = "<group>"; };
 		3C498C72799C889C8482D7FE3EB530C4 /* Context.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Context.swift; path = EasyPeasy/Context.swift; sourceTree = "<group>"; };
-		3DA2BE125ED8DE62DAD6C7064CC3C37A /* Pods-PayWandBasicElements.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PayWandBasicElements.release.xcconfig"; sourceTree = "<group>"; };
-		416393CAB94B4C5FC76C0A50AF1215AD /* Pods-PayWandBasicElements-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PayWandBasicElements-acknowledgements.plist"; sourceTree = "<group>"; };
+		3CC6C2043AD6EAFC2C1AA847E738B203 /* PayWandModelProtocols-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PayWandModelProtocols-dummy.m"; sourceTree = "<group>"; };
+		3DFAA2D83DA4B5F39CCAE086D315F136 /* Pods-PayWandBasicElements-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PayWandBasicElements-acknowledgements.markdown"; sourceTree = "<group>"; };
 		44F74FA7550C4039E13312DE1CCA2ECF /* PositionAttribute+AppKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PositionAttribute+AppKit.swift"; path = "EasyPeasy/PositionAttribute+AppKit.swift"; sourceTree = "<group>"; };
-		49EACD6E0625D38FEEA3FEDBDB149421 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C0E82227417C7FD2C8D442D64861597 /* Constant.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constant.swift; path = EasyPeasy/Constant.swift; sourceTree = "<group>"; };
 		4F41813989BBD35C8F91F4F6A32398F3 /* Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = SwiftyButton/Utils.swift; sourceTree = "<group>"; };
 		50F09B51B2D4A4B17088C4C0C5D97DE4 /* PositionAttribute+UIKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PositionAttribute+UIKit.swift"; path = "EasyPeasy/PositionAttribute+UIKit.swift"; sourceTree = "<group>"; };
-		513D8EEAB155072C1E55EC502DEB89DB /* SwiftyButton.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyButton.xcconfig; sourceTree = "<group>"; };
-		52DD5D74784969D07DE35CAE47D6AA68 /* PayWandModelProtocols-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PayWandModelProtocols-umbrella.h"; sourceTree = "<group>"; };
+		519A483DBBFD34FF20A357BD7ADDD502 /* PayWandModelProtocols-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PayWandModelProtocols-prefix.pch"; sourceTree = "<group>"; };
+		52F0BE3CBDBDDA05A5FEE94A154C72EC /* SwiftyButton.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyButton.xcconfig; sourceTree = "<group>"; };
 		56A72ABC5ED56A38D026248F4FDA3C07 /* MIT License */ = {isa = PBXFileReference; includeInIndex = 1; path = "MIT License"; sourceTree = "<group>"; };
-		5CDE35662D35BC50723130437E148AAD /* EasyPeasy-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EasyPeasy-dummy.m"; sourceTree = "<group>"; };
 		5F113366FDF54E6C1EC5857FF12DE113 /* DimensionAttribute.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DimensionAttribute.swift; path = EasyPeasy/DimensionAttribute.swift; sourceTree = "<group>"; };
 		646E062539AAEF19883E5F247AE501DC /* CompoundAttribute.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompoundAttribute.swift; path = EasyPeasy/CompoundAttribute.swift; sourceTree = "<group>"; };
-		6FC3DD6EC848F3A1925ECF442DCDF60A /* SwiftyButton-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyButton-prefix.pch"; sourceTree = "<group>"; };
+		68CA639F8BE57E7C8C4AADF659CCB50E /* EasyPeasy.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EasyPeasy.xcconfig; sourceTree = "<group>"; };
+		6A8CD08524A7DA94B87513C0C8CFE7FA /* EasyPeasy.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = EasyPeasy.modulemap; sourceTree = "<group>"; };
+		6C825FA37EB480B3387D6E076CF0CF1B /* Pods-PayWandBasicElements.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PayWandBasicElements.release.xcconfig"; sourceTree = "<group>"; };
+		6F27E4513E62F4AE310AF56B8424B88B /* Pods-PayWandBasicElements-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PayWandBasicElements-dummy.m"; sourceTree = "<group>"; };
 		71C6728110F13647A6639CD0AD7AF8B6 /* CoreDataProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CoreDataProtocols.swift; path = PayWandModelProtocols/CoreDataProtocols.swift; sourceTree = "<group>"; };
 		74A6170A08297FD43110238680E539B9 /* HEXColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HEXColor.h; path = HEXColor/HEXColor.h; sourceTree = "<group>"; };
-		77448809693CD07873933F71CF22320C /* Pods-PayWandBasicElements-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PayWandBasicElements-umbrella.h"; sourceTree = "<group>"; };
 		7FEECAB9D90ACB9B6EE454F8C961959E /* SwiftyButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyButton.framework; path = SwiftyButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		82D9D3ED021C44EED86277185F4B1241 /* UIColor_Hex_Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = UIColor_Hex_Swift.modulemap; sourceTree = "<group>"; };
-		845CB5DE3A94463915154E52F7A43134 /* EasyPeasy-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EasyPeasy-prefix.pch"; sourceTree = "<group>"; };
+		82C9F0AEB78C40812DD251271B441105 /* EasyPeasy-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EasyPeasy-prefix.pch"; sourceTree = "<group>"; };
+		833E356EE55325AFB4346F24CF0B7F84 /* PayWandModelProtocols-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PayWandModelProtocols-umbrella.h"; sourceTree = "<group>"; };
 		897D1DD160D1BA737A48AEEC5AC093E9 /* EasyPeasy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = EasyPeasy.framework; path = EasyPeasy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A1BFFA0551A2FF20DB31E2B3DCC863C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8AF578D106959F531655EBE2C2AD54C5 /* UIColorExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIColorExtension.swift; path = HEXColor/UIColorExtension.swift; sourceTree = "<group>"; };
 		8F533198998F926A0F82E33917C66C1D /* DimensionAttribute+AppKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DimensionAttribute+AppKit.swift"; path = "EasyPeasy/DimensionAttribute+AppKit.swift"; sourceTree = "<group>"; };
-		924EBAA98242DDBFEEF48831A6F02C58 /* Pods-PayWandBasicElements-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PayWandBasicElements-acknowledgements.markdown"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9A7AB2D87665FBB263FF2B70E8733C1B /* Pods_PayWandBasicElements.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PayWandBasicElements.framework; path = "Pods-PayWandBasicElements.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9E660CD2290E55A1D4DDD24DEE27DAA2 /* UIColor_Hex_Swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIColor_Hex_Swift-prefix.pch"; sourceTree = "<group>"; };
-		A19FF212D5A2DBF341D09CF5D73A89E1 /* Pods-PayWandBasicElements-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PayWandBasicElements-dummy.m"; sourceTree = "<group>"; };
-		A1ABE9E81794DC6A7BCD49462EA02FBD /* SwiftyButton.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftyButton.modulemap; sourceTree = "<group>"; };
+		9D345D135E6C1891CF85779037E50BE6 /* Pods-PayWandBasicElements-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PayWandBasicElements-umbrella.h"; sourceTree = "<group>"; };
+		A311DD3CE6FCDECF024B543BB8369DFB /* Pods-PayWandBasicElements.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PayWandBasicElements.debug.xcconfig"; sourceTree = "<group>"; };
+		A6C3D3222114829DCB488AD675C9F6A2 /* PayWandModelProtocols.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PayWandModelProtocols.xcconfig; sourceTree = "<group>"; };
+		A74CFFB89571E67A513F816C68D17251 /* PayWandModelProtocols.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PayWandModelProtocols.modulemap; sourceTree = "<group>"; };
 		A916D6DFBABBA00916ECB9E7FBE63DF1 /* PressableButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PressableButton.swift; path = SwiftyButton/PressableButton.swift; sourceTree = "<group>"; };
-		A917C31496C00965F6C6912A3B74A54B /* PayWandModelProtocols.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PayWandModelProtocols.xcconfig; sourceTree = "<group>"; };
-		AA1814E688811331A130E8E4BBE6554D /* UIColor_Hex_Swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UIColor_Hex_Swift.xcconfig; sourceTree = "<group>"; };
-		AD24D20E6A53484BFFD2D3E29CCF6461 /* UIColor_Hex_Swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIColor_Hex_Swift-dummy.m"; sourceTree = "<group>"; };
+		ACE576B9344FCB9B8272CD590480938B /* SwiftyButton-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyButton-umbrella.h"; sourceTree = "<group>"; };
 		ADF9E7F9B803DA719E04F06E6CC076F5 /* Item.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Item.swift; path = EasyPeasy/Item.swift; sourceTree = "<group>"; };
-		AE5D356E6BF803C58D35A504173B2D6F /* Pods-PayWandBasicElements-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PayWandBasicElements-resources.sh"; sourceTree = "<group>"; };
+		B315CD57CA3896C220D5510371AE7F41 /* Pods-PayWandBasicElements-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PayWandBasicElements-acknowledgements.plist"; sourceTree = "<group>"; };
 		B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		B7C2130B377E4638069FE32FF14813B7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7D45FC776B02F64CA909F71A368EDE7 /* Item+UIKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Item+UIKit.swift"; path = "EasyPeasy/Item+UIKit.swift"; sourceTree = "<group>"; };
-		B945C17E48AA4035970BAE30F2A5534F /* PayWandModelProtocols-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PayWandModelProtocols-dummy.m"; sourceTree = "<group>"; };
-		B9E9742E13AEAC19D75FBF317304EE36 /* EasyPeasy.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EasyPeasy.xcconfig; sourceTree = "<group>"; };
 		C1F501826B400BADD56802BFE89CD27B /* UIView+Easy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Easy.swift"; path = "EasyPeasy/UIView+Easy.swift"; sourceTree = "<group>"; };
 		C21CDA4C10D5F6627DABBAD0D2F742A5 /* PayWandModelProtocols.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PayWandModelProtocols.framework; path = PayWandModelProtocols.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2A5ADCDD99B52A00D9924F1A9DA4F47 /* DimensionAttribute+UIKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DimensionAttribute+UIKit.swift"; path = "EasyPeasy/DimensionAttribute+UIKit.swift"; sourceTree = "<group>"; };
 		C5602D3EB04F49709261F7647F09C2FF /* NSLayoutGuide+Easy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSLayoutGuide+Easy.swift"; path = "EasyPeasy/NSLayoutGuide+Easy.swift"; sourceTree = "<group>"; };
 		CB5CCA9D96C8DA5F057FDA51BFA243B9 /* Priority.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Priority.swift; path = EasyPeasy/Priority.swift; sourceTree = "<group>"; };
+		CCB34238D96F6D1B41200CD6B9D9ABFE /* UIColor_Hex_Swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIColor_Hex_Swift-dummy.m"; sourceTree = "<group>"; };
+		CF18756040E00C97363D8A893B74B8F3 /* Pods-PayWandBasicElements-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PayWandBasicElements-resources.sh"; sourceTree = "<group>"; };
+		D1D4C2F659327B78690934947A49AE31 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1F4573CFEA69063C7249E8B529275A4 /* UIColor_Hex_Swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIColor_Hex_Swift-umbrella.h"; sourceTree = "<group>"; };
 		D1FE10A25F34A541453ED984A6C92B6C /* Attribute.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Attribute.swift; path = EasyPeasy/Attribute.swift; sourceTree = "<group>"; };
-		D3727F9C9E113521595980365A9ADC77 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4B841B43CD536A225ED839F8A9BDC95 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D636075547138A40A01B48405FBEA3C0 /* SwiftyButton.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyButton.modulemap; sourceTree = "<group>"; };
 		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		DE43EC42395F1E5E76FE274E986AA061 /* Pods-PayWandBasicElements.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-PayWandBasicElements.modulemap"; sourceTree = "<group>"; };
-		E3A277068E0C3FE6758FF493486077E2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9D07CD76A93847977AFD3643ACFCB41 /* EasyPeasy-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EasyPeasy-umbrella.h"; sourceTree = "<group>"; };
+		DF8DD462C1B5B8546A40CC4A803B3D83 /* SwiftyButton-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyButton-prefix.pch"; sourceTree = "<group>"; };
+		E5A2D2DB477D964DA69B391FE501E14F /* EasyPeasy-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EasyPeasy-dummy.m"; sourceTree = "<group>"; };
 		E74EBB0961B3455BC1F75D751D13E7D6 /* Item+AppKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Item+AppKit.swift"; path = "EasyPeasy/Item+AppKit.swift"; sourceTree = "<group>"; };
+		E78ECBBC5614B4D875C4BCC286978C7A /* UIColor_Hex_Swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIColor_Hex_Swift-prefix.pch"; sourceTree = "<group>"; };
 		E9DF75238DB625DDB8322E14C2F7B667 /* CustomPressableButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomPressableButton.swift; path = SwiftyButton/CustomPressableButton.swift; sourceTree = "<group>"; };
 		ED27EC8FBF769EFCDE2C1214BA072429 /* FlatButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FlatButton.swift; path = SwiftyButton/FlatButton.swift; sourceTree = "<group>"; };
-		ED64BB8394637686542A312703B5F996 /* SwiftyButton-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyButton-umbrella.h"; sourceTree = "<group>"; };
 		EE45A3261D8BF5A991F80195162D5A3B /* PositionAttribute.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PositionAttribute.swift; path = EasyPeasy/PositionAttribute.swift; sourceTree = "<group>"; };
 		F0C6C0F297144E97DBDA727873CF2895 /* Node.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Node.swift; path = EasyPeasy/Node.swift; sourceTree = "<group>"; };
+		FA16CF8E91257841F6AFA045F8C7754E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,7 +212,7 @@
 				ED27EC8FBF769EFCDE2C1214BA072429 /* FlatButton.swift */,
 				A916D6DFBABBA00916ECB9E7FBE63DF1 /* PressableButton.swift */,
 				4F41813989BBD35C8F91F4F6A32398F3 /* Utils.swift */,
-				42E2E97DD487CB45617E4F26BC70B775 /* Support Files */,
+				F3A0A871FEE692B9D12014B7040FB713 /* Support Files */,
 			);
 			name = SwiftyButton;
 			path = SwiftyButton;
@@ -224,27 +224,10 @@
 				71C6728110F13647A6639CD0AD7AF8B6 /* CoreDataProtocols.swift */,
 				0BF46C2E011FA0C98B4B6353D70B0AA8 /* ServerDataProtocols.swift */,
 				0D93E23A3C4438C3B9FDE9F6DBE4D02D /* Pod */,
-				D6A70C01E7A95F652EA439080ED24AA6 /* Support Files */,
+				E4E069493325034CB0669578B2E02EEC /* Support Files */,
 			);
 			name = PayWandModelProtocols;
 			path = ../../PayWandModelProtocols;
-			sourceTree = "<group>";
-		};
-		0A6540A1055A71A364E1562F115D3706 /* Pods-PayWandBasicElements */ = {
-			isa = PBXGroup;
-			children = (
-				49EACD6E0625D38FEEA3FEDBDB149421 /* Info.plist */,
-				DE43EC42395F1E5E76FE274E986AA061 /* Pods-PayWandBasicElements.modulemap */,
-				924EBAA98242DDBFEEF48831A6F02C58 /* Pods-PayWandBasicElements-acknowledgements.markdown */,
-				416393CAB94B4C5FC76C0A50AF1215AD /* Pods-PayWandBasicElements-acknowledgements.plist */,
-				A19FF212D5A2DBF341D09CF5D73A89E1 /* Pods-PayWandBasicElements-dummy.m */,
-				AE5D356E6BF803C58D35A504173B2D6F /* Pods-PayWandBasicElements-resources.sh */,
-				77448809693CD07873933F71CF22320C /* Pods-PayWandBasicElements-umbrella.h */,
-				18E812419CF03F46FA66F5A48999ACF8 /* Pods-PayWandBasicElements.debug.xcconfig */,
-				3DA2BE125ED8DE62DAD6C7064CC3C37A /* Pods-PayWandBasicElements.release.xcconfig */,
-			);
-			name = "Pods-PayWandBasicElements";
-			path = "Target Support Files/Pods-PayWandBasicElements";
 			sourceTree = "<group>";
 		};
 		0D93E23A3C4438C3B9FDE9F6DBE4D02D /* Pod */ = {
@@ -278,18 +261,35 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		42E2E97DD487CB45617E4F26BC70B775 /* Support Files */ = {
+		2BF5BCC35218C985C4D3DFC8B3C657D3 /* Pods-PayWandBasicElements */ = {
 			isa = PBXGroup;
 			children = (
-				0AB27D9DAB18B4406F5861EE1352842C /* Info.plist */,
-				A1ABE9E81794DC6A7BCD49462EA02FBD /* SwiftyButton.modulemap */,
-				513D8EEAB155072C1E55EC502DEB89DB /* SwiftyButton.xcconfig */,
-				1E6A0B87EE4EDC629E54816E41487E47 /* SwiftyButton-dummy.m */,
-				6FC3DD6EC848F3A1925ECF442DCDF60A /* SwiftyButton-prefix.pch */,
-				ED64BB8394637686542A312703B5F996 /* SwiftyButton-umbrella.h */,
+				FA16CF8E91257841F6AFA045F8C7754E /* Info.plist */,
+				379A06F51C86D751C09DE8B98B6BA06A /* Pods-PayWandBasicElements.modulemap */,
+				3DFAA2D83DA4B5F39CCAE086D315F136 /* Pods-PayWandBasicElements-acknowledgements.markdown */,
+				B315CD57CA3896C220D5510371AE7F41 /* Pods-PayWandBasicElements-acknowledgements.plist */,
+				6F27E4513E62F4AE310AF56B8424B88B /* Pods-PayWandBasicElements-dummy.m */,
+				CF18756040E00C97363D8A893B74B8F3 /* Pods-PayWandBasicElements-resources.sh */,
+				9D345D135E6C1891CF85779037E50BE6 /* Pods-PayWandBasicElements-umbrella.h */,
+				A311DD3CE6FCDECF024B543BB8369DFB /* Pods-PayWandBasicElements.debug.xcconfig */,
+				6C825FA37EB480B3387D6E076CF0CF1B /* Pods-PayWandBasicElements.release.xcconfig */,
+			);
+			name = "Pods-PayWandBasicElements";
+			path = "Target Support Files/Pods-PayWandBasicElements";
+			sourceTree = "<group>";
+		};
+		30BCBCF04936349DA5740208ACCCC679 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6A8CD08524A7DA94B87513C0C8CFE7FA /* EasyPeasy.modulemap */,
+				68CA639F8BE57E7C8C4AADF659CCB50E /* EasyPeasy.xcconfig */,
+				E5A2D2DB477D964DA69B391FE501E14F /* EasyPeasy-dummy.m */,
+				82C9F0AEB78C40812DD251271B441105 /* EasyPeasy-prefix.pch */,
+				D9D07CD76A93847977AFD3643ACFCB41 /* EasyPeasy-umbrella.h */,
+				0002BE4394A060AF8BA979240D272B74 /* Info.plist */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/SwiftyButton";
+			path = "../Target Support Files/EasyPeasy";
 			sourceTree = "<group>";
 		};
 		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
@@ -332,7 +332,7 @@
 				14379BA8EB59C9B5438D2D354DE79183 /* ReferenceAttribute.swift */,
 				039E96833852AA2FEEE13FB995ADF26A /* UILayoutGuide+Easy.swift */,
 				C1F501826B400BADD56802BFE89CD27B /* UIView+Easy.swift */,
-				8036295DBC2B511C1271B04C6A3FEC3C /* Support Files */,
+				30BCBCF04936349DA5740208ACCCC679 /* Support Files */,
 			);
 			name = EasyPeasy;
 			path = EasyPeasy;
@@ -350,51 +350,37 @@
 			);
 			sourceTree = "<group>";
 		};
-		8036295DBC2B511C1271B04C6A3FEC3C /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				25228FA5D76A8D6E4197811BF7D17AFC /* EasyPeasy.modulemap */,
-				B9E9742E13AEAC19D75FBF317304EE36 /* EasyPeasy.xcconfig */,
-				5CDE35662D35BC50723130437E148AAD /* EasyPeasy-dummy.m */,
-				845CB5DE3A94463915154E52F7A43134 /* EasyPeasy-prefix.pch */,
-				14E0D72F7F139D01C9DAFF6AB6537815 /* EasyPeasy-umbrella.h */,
-				E3A277068E0C3FE6758FF493486077E2 /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/EasyPeasy";
-			sourceTree = "<group>";
-		};
 		831E888DFAAA9CE770D3FDACD83AD7C6 /* UIColor_Hex_Swift */ = {
 			isa = PBXGroup;
 			children = (
 				74A6170A08297FD43110238680E539B9 /* HEXColor.h */,
 				8AF578D106959F531655EBE2C2AD54C5 /* UIColorExtension.swift */,
-				F35D1B584E995FA88850625FD7157302 /* Support Files */,
+				94D88837903FFB12FC8CC81F9E93E360 /* Support Files */,
 			);
 			name = UIColor_Hex_Swift;
 			path = UIColor_Hex_Swift;
 			sourceTree = "<group>";
 		};
+		94D88837903FFB12FC8CC81F9E93E360 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D1D4C2F659327B78690934947A49AE31 /* Info.plist */,
+				0F6C169132D6647E0AFABC55BE98852D /* UIColor_Hex_Swift.modulemap */,
+				06D93F709B097A850E40B4A4DDAFD4BC /* UIColor_Hex_Swift.xcconfig */,
+				CCB34238D96F6D1B41200CD6B9D9ABFE /* UIColor_Hex_Swift-dummy.m */,
+				E78ECBBC5614B4D875C4BCC286978C7A /* UIColor_Hex_Swift-prefix.pch */,
+				D1F4573CFEA69063C7249E8B529275A4 /* UIColor_Hex_Swift-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/UIColor_Hex_Swift";
+			sourceTree = "<group>";
+		};
 		D281980D0239A1CDD74E4FA1411F351D /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				0A6540A1055A71A364E1562F115D3706 /* Pods-PayWandBasicElements */,
+				2BF5BCC35218C985C4D3DFC8B3C657D3 /* Pods-PayWandBasicElements */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		D6A70C01E7A95F652EA439080ED24AA6 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				B7C2130B377E4638069FE32FF14813B7 /* Info.plist */,
-				180F228A3E521A0DBB4FAE573343D0DE /* PayWandModelProtocols.modulemap */,
-				A917C31496C00965F6C6912A3B74A54B /* PayWandModelProtocols.xcconfig */,
-				B945C17E48AA4035970BAE30F2A5534F /* PayWandModelProtocols-dummy.m */,
-				04C80D0AEDDA916D52634054B43A7BDD /* PayWandModelProtocols-prefix.pch */,
-				52DD5D74784969D07DE35CAE47D6AA68 /* PayWandModelProtocols-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../PayWandBasicElements/Pods/Target Support Files/PayWandModelProtocols";
 			sourceTree = "<group>";
 		};
 		D7E52537CC2DDB0A6EB665A1984BBF98 /* Development Pods */ = {
@@ -405,18 +391,32 @@
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		F35D1B584E995FA88850625FD7157302 /* Support Files */ = {
+		E4E069493325034CB0669578B2E02EEC /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				D3727F9C9E113521595980365A9ADC77 /* Info.plist */,
-				82D9D3ED021C44EED86277185F4B1241 /* UIColor_Hex_Swift.modulemap */,
-				AA1814E688811331A130E8E4BBE6554D /* UIColor_Hex_Swift.xcconfig */,
-				AD24D20E6A53484BFFD2D3E29CCF6461 /* UIColor_Hex_Swift-dummy.m */,
-				9E660CD2290E55A1D4DDD24DEE27DAA2 /* UIColor_Hex_Swift-prefix.pch */,
-				251236EBD0C63D0A4A529A532C9AB713 /* UIColor_Hex_Swift-umbrella.h */,
+				D4B841B43CD536A225ED839F8A9BDC95 /* Info.plist */,
+				A74CFFB89571E67A513F816C68D17251 /* PayWandModelProtocols.modulemap */,
+				A6C3D3222114829DCB488AD675C9F6A2 /* PayWandModelProtocols.xcconfig */,
+				3CC6C2043AD6EAFC2C1AA847E738B203 /* PayWandModelProtocols-dummy.m */,
+				519A483DBBFD34FF20A357BD7ADDD502 /* PayWandModelProtocols-prefix.pch */,
+				833E356EE55325AFB4346F24CF0B7F84 /* PayWandModelProtocols-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/UIColor_Hex_Swift";
+			path = "../PayWandBasicElements/Pods/Target Support Files/PayWandModelProtocols";
+			sourceTree = "<group>";
+		};
+		F3A0A871FEE692B9D12014B7040FB713 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8A1BFFA0551A2FF20DB31E2B3DCC863C /* Info.plist */,
+				D636075547138A40A01B48405FBEA3C0 /* SwiftyButton.modulemap */,
+				52F0BE3CBDBDDA05A5FEE94A154C72EC /* SwiftyButton.xcconfig */,
+				00BE56BAEE5F7F5E966E4D122B2B158B /* SwiftyButton-dummy.m */,
+				DF8DD462C1B5B8546A40CC4A803B3D83 /* SwiftyButton-prefix.pch */,
+				ACE576B9344FCB9B8272CD590480938B /* SwiftyButton-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyButton";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -561,8 +561,8 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0700;
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -683,9 +683,9 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		42FA32E8211D09E6B818DD3340089768 /* Release */ = {
+		0851CCEEF180DF677AE7A1D2950C6406 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 513D8EEAB155072C1E55EC502DEB89DB /* SwiftyButton.xcconfig */;
+			baseConfigurationReference = 52F0BE3CBDBDDA05A5FEE94A154C72EC /* SwiftyButton.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -702,6 +702,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SwiftyButton/SwiftyButton.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyButton;
 				PRODUCT_NAME = SwiftyButton;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -715,10 +716,45 @@
 			};
 			name = Release;
 		};
-		489EE9DBFB5A1A5D98473A80133BD87E /* Debug */ = {
+		109ABC939AD85A246F5B4E18B055E1BA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 18E812419CF03F46FA66F5A48999ACF8 /* Pods-PayWandBasicElements.debug.xcconfig */;
+			baseConfigurationReference = 68CA639F8BE57E7C8C4AADF659CCB50E /* EasyPeasy.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/EasyPeasy/EasyPeasy-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/EasyPeasy/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/EasyPeasy/EasyPeasy.modulemap";
+				PRODUCT_MODULE_NAME = EasyPeasy;
+				PRODUCT_NAME = EasyPeasy;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1903F09D8E61A51378FF98F426198A23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C825FA37EB480B3387D6E076CF0CF1B /* Pods-PayWandBasicElements.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -738,80 +774,18 @@
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_PayWandBasicElements;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		5D37CFE4A20AC1D8A388C1B522834539 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B9E9742E13AEAC19D75FBF317304EE36 /* EasyPeasy.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/EasyPeasy/EasyPeasy-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/EasyPeasy/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/EasyPeasy/EasyPeasy.modulemap";
-				PRODUCT_NAME = EasyPeasy;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		6B1BCE37E2B66AAB9B4B22A168D7D954 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AA1814E688811331A130E8E4BBE6554D /* UIColor_Hex_Swift.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/UIColor_Hex_Swift/UIColor_Hex_Swift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/UIColor_Hex_Swift/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/UIColor_Hex_Swift/UIColor_Hex_Swift.modulemap";
-				PRODUCT_NAME = UIColor_Hex_Swift;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		7C07ED8089F70A31B83996A8910D7F18 /* Debug */ = {
+		553022A828EE1991F07D2D73F565AEF8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -821,10 +795,12 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -832,6 +808,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -840,6 +817,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -864,16 +842,15 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		981C9A984A8CBFB15CAB81F3371A6FC2 /* Release */ = {
+		5725F9391D52A1ACF5D0D94BEE77D586 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B9E9742E13AEAC19D75FBF317304EE36 /* EasyPeasy.xcconfig */;
+			baseConfigurationReference = 06D93F709B097A850E40B4A4DDAFD4BC /* UIColor_Hex_Swift.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -884,13 +861,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/EasyPeasy/EasyPeasy-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/EasyPeasy/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/UIColor_Hex_Swift/UIColor_Hex_Swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UIColor_Hex_Swift/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/EasyPeasy/EasyPeasy.modulemap";
-				PRODUCT_NAME = EasyPeasy;
+				MODULEMAP_FILE = "Target Support Files/UIColor_Hex_Swift/UIColor_Hex_Swift.modulemap";
+				PRODUCT_MODULE_NAME = UIColor_Hex_Swift;
+				PRODUCT_NAME = UIColor_Hex_Swift;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -903,7 +881,7 @@
 			};
 			name = Release;
 		};
-		98F29E7567052F62660DDD7069ADF73C /* Release */ = {
+		58CE816B060A41D32CEC095441D0E3E0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -913,10 +891,12 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -924,6 +904,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -932,6 +913,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -952,15 +934,14 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
 		};
-		A98B53EA7AF2D78B1BF669C608FE6B06 /* Release */ = {
+		655888C8B58E96CFA6A9905DCCEF2428 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A917C31496C00965F6C6912A3B74A54B /* PayWandModelProtocols.xcconfig */;
+			baseConfigurationReference = A6C3D3222114829DCB488AD675C9F6A2 /* PayWandModelProtocols.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -977,22 +958,54 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/PayWandModelProtocols/PayWandModelProtocols.modulemap";
+				PRODUCT_MODULE_NAME = PayWandModelProtocols;
 				PRODUCT_NAME = PayWandModelProtocols;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		C26CAB17B7212141A278350EE8167B3B /* Debug */ = {
+		6B9CF08A946D01C1EB0A1221F703A6AF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 513D8EEAB155072C1E55EC502DEB89DB /* SwiftyButton.xcconfig */;
+			baseConfigurationReference = 68CA639F8BE57E7C8C4AADF659CCB50E /* EasyPeasy.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/EasyPeasy/EasyPeasy-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/EasyPeasy/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/EasyPeasy/EasyPeasy.modulemap";
+				PRODUCT_MODULE_NAME = EasyPeasy;
+				PRODUCT_NAME = EasyPeasy;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		90F0FDBD3BC6D793B1ADAAB9B3B6EE95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52F0BE3CBDBDDA05A5FEE94A154C72EC /* SwiftyButton.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1009,6 +1022,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SwiftyButton/SwiftyButton.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyButton;
 				PRODUCT_NAME = SwiftyButton;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1021,10 +1035,12 @@
 			};
 			name = Debug;
 		};
-		C456CFF7D0C653F4FBCFF4DE99DEC9B3 /* Release */ = {
+		AD88C5640C6A06F1E058620D8908AA20 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3DA2BE125ED8DE62DAD6C7064CC3C37A /* Pods-PayWandBasicElements.release.xcconfig */;
+			baseConfigurationReference = A311DD3CE6FCDECF024B543BB8369DFB /* Pods-PayWandBasicElements.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1044,20 +1060,20 @@
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_PayWandBasicElements;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		D65532BE138D1FF09AD98958876D81F8 /* Debug */ = {
+		D9CFE0995AE78DB2103C0D4CDCCDF22D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A917C31496C00965F6C6912A3B74A54B /* PayWandModelProtocols.xcconfig */;
+			baseConfigurationReference = A6C3D3222114829DCB488AD675C9F6A2 /* PayWandModelProtocols.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1074,21 +1090,23 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/PayWandModelProtocols/PayWandModelProtocols.modulemap";
+				PRODUCT_MODULE_NAME = PayWandModelProtocols;
 				PRODUCT_NAME = PayWandModelProtocols;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		F8C30C8572173AAAE64A40B3BA65962F /* Release */ = {
+		F49FAC85C6C1ACDE2113B15B21FCE7A2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AA1814E688811331A130E8E4BBE6554D /* UIColor_Hex_Swift.xcconfig */;
+			baseConfigurationReference = 06D93F709B097A850E40B4A4DDAFD4BC /* UIColor_Hex_Swift.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1105,18 +1123,18 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/UIColor_Hex_Swift/UIColor_Hex_Swift.modulemap";
+				PRODUCT_MODULE_NAME = UIColor_Hex_Swift;
 				PRODUCT_NAME = UIColor_Hex_Swift;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
@@ -1124,8 +1142,8 @@
 		09077C94E191775E258073FA5A3C405C /* Build configuration list for PBXNativeTarget "EasyPeasy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5D37CFE4A20AC1D8A388C1B522834539 /* Debug */,
-				981C9A984A8CBFB15CAB81F3371A6FC2 /* Release */,
+				6B9CF08A946D01C1EB0A1221F703A6AF /* Debug */,
+				109ABC939AD85A246F5B4E18B055E1BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1133,8 +1151,8 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7C07ED8089F70A31B83996A8910D7F18 /* Debug */,
-				98F29E7567052F62660DDD7069ADF73C /* Release */,
+				553022A828EE1991F07D2D73F565AEF8 /* Debug */,
+				58CE816B060A41D32CEC095441D0E3E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1142,8 +1160,8 @@
 		9214E64CC5AECD422F74B81558E7B04C /* Build configuration list for PBXNativeTarget "PayWandModelProtocols" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D65532BE138D1FF09AD98958876D81F8 /* Debug */,
-				A98B53EA7AF2D78B1BF669C608FE6B06 /* Release */,
+				655888C8B58E96CFA6A9905DCCEF2428 /* Debug */,
+				D9CFE0995AE78DB2103C0D4CDCCDF22D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1151,8 +1169,8 @@
 		A3F57451618B1D9BA584D2F03E74D50A /* Build configuration list for PBXNativeTarget "Pods-PayWandBasicElements" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				489EE9DBFB5A1A5D98473A80133BD87E /* Debug */,
-				C456CFF7D0C653F4FBCFF4DE99DEC9B3 /* Release */,
+				AD88C5640C6A06F1E058620D8908AA20 /* Debug */,
+				1903F09D8E61A51378FF98F426198A23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1160,8 +1178,8 @@
 		BF4D815D042E331BC29555AEB57E4173 /* Build configuration list for PBXNativeTarget "UIColor_Hex_Swift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6B1BCE37E2B66AAB9B4B22A168D7D954 /* Debug */,
-				F8C30C8572173AAAE64A40B3BA65962F /* Release */,
+				F49FAC85C6C1ACDE2113B15B21FCE7A2 /* Debug */,
+				5725F9391D52A1ACF5D0D94BEE77D586 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1169,8 +1187,8 @@
 		F265CCBBF327B5E6A04E95CEEC667573 /* Build configuration list for PBXNativeTarget "SwiftyButton" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C26CAB17B7212141A278350EE8167B3B /* Debug */,
-				42FA32E8211D09E6B818DD3340089768 /* Release */,
+				90F0FDBD3BC6D793B1ADAAB9B3B6EE95 /* Debug */,
+				0851CCEEF180DF677AE7A1D2950C6406 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
