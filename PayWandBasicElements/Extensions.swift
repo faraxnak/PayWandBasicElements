@@ -129,7 +129,7 @@ extension UIFont {
                 case .semibold2:
                     return TtroFonts.semibold(size: 40).font
                 case .regular1:
-                    return TtroFonts.regular(size: 20).font
+                    return TtroFonts.regular(size: 19).font
                 case .regular2:
                     return TtroFonts.regular(size: 24).font
                 case .regular3:
@@ -308,6 +308,14 @@ extension UIImage {
 //            renderContext.cgContext.draw(cgImage, in: drawRect)
 //        }
 //    }
+}
+
+extension UIImageView {
+    public func setImageColor(color: UIColor) {
+        let templateImage = self.image?.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
+        self.image = templateImage
+        self.tintColor = color
+    }
 }
 
 extension CGSize {

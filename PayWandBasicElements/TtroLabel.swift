@@ -7,16 +7,31 @@
 //
 
 import UIKit
+import EasyPeasy
 
 public class TtroLabel: UILabel {
     
     var mainFont : UIFont!
     
-    public convenience init(font : UIFont, color : UIColor) {
+    fileprivate let selectSymbol = " ▾ "
+    
+    public convenience init(font : UIFont, color : UIColor, shouldShowSelector : Bool = false) {
         self.init(frame : CGRect.zero)
         textColor = color
         self.font = font
         mainFont = font
+        
+        if shouldShowSelector {
+            let selectLabel = TtroLabel(font: font, color: color)
+            addSubview(selectLabel)
+            selectLabel.easy.layout([
+                Left(),
+                CenterY(),
+                Height().like(self),
+                Width(30)
+                ])
+            selectLabel.text = selectSymbol
+        }
     }
     
     override public init(frame: CGRect) {
@@ -63,6 +78,24 @@ public class TtroLabel: UILabel {
     }
     */
 
+    open var padding = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
+    
+    open var shouldPad = false
+    
+    public override func drawText(in rect: CGRect) {
+        if shouldPad {
+            super.drawText(in: UIEdgeInsetsInsetRect(rect, padding))
+        } else {            
+            super.drawText(in: rect)
+        }
+    }
+    
+    
+//    override public func textRect(forBounds bounds: CGRect,
+//                           limitedToNumberOfLines numberOfLines: Int) -> CGRect {
+//        return super.textRect(forBounds: UIEdgeInsetsInsetRect(bounds, padding),
+//                              limitedToNumberOfLines: numberOfLines)
+//    }
 }
 
 
