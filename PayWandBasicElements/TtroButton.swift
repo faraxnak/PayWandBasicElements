@@ -23,6 +23,16 @@ public class TtroButton: UIButton {
         self.mode = mode
     }
     
+    public func setColor(color: UIColor, highlightColor: UIColor? = nil, textColor: UIColor? = nil){
+        self.color = color
+        if highlightColor != nil {
+            self.highlightColor = highlightColor!
+        } else {
+            self.highlightColor = self.color
+        }
+        setTitleColor(textColor ?? color, for: .normal)
+    }
+    
     public convenience init(corners : UIRectCorner, radius : CGFloat, color: UIColor? = nil, highlightColor: UIColor? = nil){
         self.init()
         self.corners = corners
