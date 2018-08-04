@@ -9,6 +9,7 @@
 import UIKit
 import UIColor_Hex_Swift
 import PayWandModelProtocols
+import SwifterSwift
 
 public protocol TtroColorProtocol {
     var color : UIColor { get }
@@ -69,11 +70,27 @@ extension UIFont {
             case let .extraLight(size):
                 return UIFont(name: "SourceSansPro-ExtraLight", size: size)!
             case let .light(size):
-                return UIFont(name: "SourceSansPro-Light", size: size)!
+                if Locale.current.languageCode == "ar" {
+//                    return UIFont(name: "Dubai-Light", size: size)!
+                    return UIFont(name: "Dubai-Light", size: size)!
+                } else {
+                    return UIFont(name: "SourceSansPro-Light", size: size)!
+                }
             case let .regular(size):
-                return UIFont(name: "SourceSansPro-Regular", size: size)!
+                if Locale.current.languageCode == "ar" {
+//                    return UIFont(name: "Dubai-Regular", size: size)!
+                    return UIFont(name: "Dubai-Regular", size: size)!
+                } else {
+                    return UIFont(name: "SourceSansPro-Regular", size: size)!
+                }
             case let .semibold(size):
-                return UIFont(name: "SourceSansPro-Semibold", size: size)!
+                if Locale.current.languageCode == "ar" {
+//                    return UIFont(name: "Dubai-Regular", size: size)!
+                    return UIFont(name: "Dubai-Regular", size: size)!
+                } else {
+                    return UIFont(name: "SourceSansPro-Semibold", size: size)!
+                }
+                
                 //            case let .BNazanin(size):
                 //                return UIFont(name: "BNazanin", size: size)!
                 //            case let .AdobeArabic(size):
@@ -85,6 +102,40 @@ extension UIFont {
             return getFont()
         }
     }
+    
+//    func getSizeiPad(font: TtroPayWandFonts) -> CGFloat {
+//
+//        switch font {
+//        case .semibold1:
+//            return isArabic ? 30 : 20
+//        case .semibold2:
+//            return isArabic ? 50 : 40
+//        case .regular1:
+//            return isArabic ? 36 : 24
+//        case .regular2:
+//            return isArabic ? 40 : 30
+//        case .regular3:
+//            return isArabic ? 48 : 36
+//        case .regular4:
+//            return isArabic ? 50 : 40
+//        case .regular5:
+//            return isArabic ? 60 : 48
+//        case .light1:
+//            return isArabic ? 28 : 16
+//        case .light2:
+//            return isArabic ? 30 : 20
+//        case .light3:
+//            return isArabic ? 36 : 20
+//        case .light4:
+//            return isArabic ? 40 : 30
+//        case .light5:
+//            return isArabic ? 48 : 36
+//        case .light6:
+//            return isArabic ? 50 : 42
+//        }
+//    }
+    
+    
     
     public enum TtroPayWandFonts : TtroFontProtocol {
         case semibold1, semibold2
@@ -123,33 +174,34 @@ extension UIFont {
                 }
             }
             else if (DeviceType.IS_IPHONE_6 || DeviceType.IS_IPHONE_6P) {
+                let size = getSizeiPhone6()
                 switch self {
                 case .semibold1:
-                    return TtroFonts.semibold(size: 18).font
+                    return TtroFonts.semibold(size: size).font
                 case .semibold2:
-                    return TtroFonts.semibold(size: 40).font
+                    return TtroFonts.semibold(size: size).font
                 case .regular1:
-                    return TtroFonts.regular(size: 19).font
+                    return TtroFonts.regular(size: size).font
                 case .regular2:
-                    return TtroFonts.regular(size: 24).font
+                    return TtroFonts.regular(size: size).font
                 case .regular3:
-                    return TtroFonts.regular(size: 30).font
+                    return TtroFonts.regular(size: size).font
                 case .regular4:
-                    return TtroFonts.regular(size: 36).font
+                    return TtroFonts.regular(size: size).font
                 case .regular5:
-                    return TtroFonts.regular(size: 44).font
+                    return TtroFonts.regular(size: size).font
                 case .light1:
-                    return TtroFonts.light(size: 14).font
+                    return TtroFonts.light(size: size).font
                 case .light2:
-                    return TtroFonts.light(size: 20).font
+                    return TtroFonts.light(size: size).font
                 case .light3:
-                    return TtroFonts.light(size: 24).font
+                    return TtroFonts.light(size: size).font
                 case .light4:
-                    return TtroFonts.light(size: 28).font
+                    return TtroFonts.light(size: size).font
                 case .light5:
-                    return TtroFonts.light(size: 34).font
+                    return TtroFonts.light(size: size).font
                 case .light6:
-                    return TtroFonts.light(size: 40).font
+                    return TtroFonts.light(size: size).font
                 }
             }
             else {
@@ -186,6 +238,44 @@ extension UIFont {
         
         public var font: UIFont {
             return getFont()
+        }
+        
+        var isArabic : Bool {
+            get {
+                return false
+//                return Locale.current.languageCode == "ar"
+            }
+        }
+        
+        func getSizeiPhone6() -> CGFloat {
+            switch self {
+            case .semibold1:
+                return isArabic ? 30 : 18
+            case .semibold2:
+                return isArabic ? 50 : 40
+            case .regular1:
+                return isArabic ? 30 : 19
+            case .regular2:
+                return isArabic ? 36 : 24
+            case .regular3:
+                return isArabic ? 40 : 30
+            case .regular4:
+                return isArabic ? 48 : 36
+            case .regular5:
+                return isArabic ? 54 : 44
+            case .light1:
+                return isArabic ? 24 : 14
+            case .light2:
+                return isArabic ? 30 : 20
+            case .light3:
+                return isArabic ? 36 : 24
+            case .light4:
+                return isArabic ? 40 : 28
+            case .light5:
+                return isArabic ? 44 : 34
+            case .light6:
+                return isArabic ? 50 : 40
+            }
         }
     }
 }
@@ -498,10 +588,10 @@ public extension UIScrollView {
         }
     }
     
-    public func scrollToTop(animated: Bool) {
-        let topOffset = CGPoint(x: 0, y: -contentInset.top)
-        setContentOffset(topOffset, animated: animated)
-    }
+//    public func scrollToTop(animated: Bool) {
+//        let topOffset = CGPoint(x: 0, y: -contentInset.top)
+//        setContentOffset(topOffset, animated: animated)
+//    }
     
     public func scrollToBottom() {
         let bottomOffset = CGPoint(x: 0, y: contentSize.height - bounds.size.height + contentInset.bottom)
@@ -593,6 +683,17 @@ public extension UIImage {
         return newImage!
     }
 }
+
+//extension UIView {
+//    /// SwifterSwift: Check if view is in RTL format.
+//    public var isRightToLeft: Bool {
+//        if #available(iOS 10.0, *, tvOS 10.0, *) {
+//            return effectiveUserInterfaceLayoutDirection == .rightToLeft
+//        } else {
+//            return false
+//        }
+//    }
+//}
 
 //extension String {
 //    public var isEmailTtro: Bool {

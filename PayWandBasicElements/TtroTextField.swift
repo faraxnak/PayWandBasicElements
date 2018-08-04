@@ -140,11 +140,12 @@ public class TtroTextField: UITextField {
         // Create an `NSCharacterSet` set which includes everything *but* the digits
         switch _inputMode {
         case .phoneNumber:
-            inverseSet = CharacterSet(charactersIn:"0123456789").inverted
+            inverseSet = CharacterSet.decimalDigits.inverted
         case .digit:
-            inverseSet = CharacterSet(charactersIn:"0123456789").inverted
+            inverseSet = CharacterSet.decimalDigits.inverted
         case .double:
-            inverseSet = CharacterSet(charactersIn:"0123456789".appending(Locale.current.decimalSeparator ?? "")).inverted
+            var set = CharacterSet.decimalDigits
+            inverseSet = set.union(CharacterSet(charactersIn: Locale.current.decimalSeparator ?? "")).inverted
         case .name:
             inverseSet = CharacterSet.letters
             inverseSet.insert(" ")
@@ -357,11 +358,20 @@ extension TtroTextField {
         return nameTest.evaluate(with: self.text!)
     }
     
-    func isValidPhone() -> Bool {
-        let phoneRegEx = "[0-9]{8,12}"
-        
-        let phoneTest = NSPredicate(format:"SELF MATCHES %@", phoneRegEx)
-        return phoneTest.evaluate(with: self.text!)
+    func isValidPhone() -> Bool {        
+        guard let text = text else {
+            return false
+        }
+        if text.count > 8 &&
+            text.count < 12 &&
+            text.rangeOfCharacter(from: CharacterSet.decimalDigits.inverted) == nil {
+            return true
+        } else {
+            return false
+        }
+//        let phoneRegEx = "[0-9]{8,12}"
+//        let phoneTest = NSPredicate(format:"SELF MATCHES %@", phoneRegEx)
+//        return phoneTest.evaluate(with: self.text!)
     }
 }
 

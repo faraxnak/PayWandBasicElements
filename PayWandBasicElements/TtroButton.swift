@@ -122,7 +122,8 @@ extension UIButton {
                 sButton.colors = .init(button: UIColor.TtroColors.darkBlue.color,
                                        shadow: UIColor.TtroColors.darkBlue.color.withAlphaComponent(0.5))
                 sButton.shadowHeight = 2
-                sButton.cornerRadius = 5
+                
+//                sButton.cornerRadius = 5
             }
         case .backgroundless:
             titleLabel?.font = font

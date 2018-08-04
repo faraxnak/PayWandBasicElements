@@ -15,6 +15,19 @@ public class TtroLabel: UILabel {
     
     fileprivate let selectSymbol = " ▾ "
     
+//    override public var text: String? {
+//        willSet {
+//            self.attributedText = nil
+//        }
+//        
+//        didSet {
+//            if Locale.current.languageCode == "ar" {
+//                setLineHeight(lineHeight: 4)
+//            }
+//            layoutIfNeeded()
+//        }
+//    }
+    
     public convenience init(font : UIFont, color : UIColor, shouldShowSelector : Bool = false) {
         self.init(frame : CGRect.zero)
         textColor = color
@@ -90,6 +103,26 @@ public class TtroLabel: UILabel {
         }
     }
     
+    public func setLineHeight(lineHeight: CGFloat) {
+        var attributeString : NSMutableAttributedString!
+        var style : NSMutableParagraphStyle!
+        if let text = self.attributedText {
+            attributeString = NSMutableAttributedString(attributedString: text)
+            if let s = text.attributes[NSAttributedStringKey.paragraphStyle] as? NSMutableParagraphStyle {
+                style = s
+            } else {
+                style = NSMutableParagraphStyle()
+            }
+        }
+        if let text = self.text {
+            attributeString = NSMutableAttributedString(string: text)
+            style = NSMutableParagraphStyle()
+        }
+        style.lineSpacing = lineHeight
+        attributeString.addAttribute(NSAttributedStringKey.paragraphStyle, value: style, range: NSMakeRange(0, attributeString.string.count))
+        self.attributedText = attributeString
+    }
+    
     
 //    override public func textRect(forBounds bounds: CGRect,
 //                           limitedToNumberOfLines numberOfLines: Int) -> CGRect {
@@ -132,7 +165,7 @@ public class HighlightTextView: UIView {
         }
     }
     
-    public var cornerRadius : CGFloat = 4
+//    public var cornerRadius : CGFloat = 4
     
     public override func draw(_ rect: CGRect) {
         super.draw(rect)
