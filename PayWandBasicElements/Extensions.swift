@@ -10,6 +10,7 @@ import UIKit
 import UIColor_Hex_Swift
 import PayWandModelProtocols
 import SwifterSwift
+import Localize_Swift
 
 public protocol TtroColorProtocol {
     var color : UIColor { get }
@@ -72,21 +73,21 @@ extension UIFont {
             case let .light(size):
                 if Locale.current.languageCode == "ar" {
 //                    return UIFont(name: "Dubai-Light", size: size)!
-                    return UIFont(name: "Dubai-Light", size: size)!
+                    return UIFont(name: "SourceSansPro-Light", size: size)! //Dubai-Light
                 } else {
                     return UIFont(name: "SourceSansPro-Light", size: size)!
                 }
             case let .regular(size):
                 if Locale.current.languageCode == "ar" {
 //                    return UIFont(name: "Dubai-Regular", size: size)!
-                    return UIFont(name: "Dubai-Regular", size: size)!
+                    return UIFont(name: "SourceSansPro-Regular", size: size)! //Dubai-Regular
                 } else {
                     return UIFont(name: "SourceSansPro-Regular", size: size)!
                 }
             case let .semibold(size):
                 if Locale.current.languageCode == "ar" {
 //                    return UIFont(name: "Dubai-Regular", size: size)!
-                    return UIFont(name: "Dubai-Regular", size: size)!
+                    return UIFont(name: "SourceSansPro-Semibold", size: size)! //Dubai-Regular
                 } else {
                     return UIFont(name: "SourceSansPro-Semibold", size: size)!
                 }
@@ -631,12 +632,42 @@ public extension String {
         return string
     }
     
+    public func localizedPlusColon() -> String{
+        return self.localized().appending(":")
+    }
+    
     public func widthWithConstrainedWidth(_ height: CGFloat, font: UIFont) -> CGFloat {
         let constraintRect = CGSize(width: CGFloat.greatestFiniteMagnitude, height: height)
         
         let boundingBox = self.boundingRect(with: constraintRect, options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font: font], context: nil)
         
         return boundingBox.width
+    }
+    
+    public var replacedArabicDigitsWithEnglish: String {
+        var str = self
+        let map = ["٠": "0",
+                   "١": "1",
+                   "٢": "2",
+                   "٣": "3",
+                   "٤": "4",
+                   "٥": "5",
+                   "٦": "6",
+                   "٧": "7",
+                   "٨": "8",
+                   "٩": "9",
+                   "۰": "0",
+                   "۱": "1",
+                   "۲": "2",
+                   "۳": "3",
+                   "۴": "4",
+                   "۵": "5",
+                   "۶": "6",
+                   "۷": "7",
+                   "۸": "8",
+                   "۹": "9"]
+        map.forEach { str = str.replacingOccurrences(of: $0, with: $1) }
+        return str
     }
 }
 

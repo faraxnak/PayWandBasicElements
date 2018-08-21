@@ -47,6 +47,12 @@ public class TtroTextField: UITextField {
         }
     }
     
+    var englishDigitText : String? {
+        get {
+            return text?.replacedArabicDigitsWithEnglish
+        }
+    }
+    
     var corners : UIRectCorner! = []
     var radius : CGFloat! = 10
     
@@ -87,6 +93,8 @@ public class TtroTextField: UITextField {
         rightView?.backgroundColor = UIColor.TtroColors.red.color.withAlphaComponent(0.8)
         leftView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: 100))
         leftView?.backgroundColor = UIColor.TtroColors.red.color.withAlphaComponent(0.8)
+        
+        addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
     }
     
     public enum Style {
@@ -159,7 +167,7 @@ public class TtroTextField: UITextField {
         // At every character in this "inverseSet" contained in the string,
         // split the string up into components which exclude the characters
         // in this inverse set
-        let components = string.components(separatedBy: inverseSet)
+        let components = string.replacedArabicDigitsWithEnglish.components(separatedBy: inverseSet)
         
         // Rejoin these components
         let filtered = components.joined(separator: "")  // use join("", components) if you are using Swift 1.2
@@ -172,7 +180,7 @@ public class TtroTextField: UITextField {
             }
             
         case .double:
-            if string != filtered {
+            if string.replacedArabicDigitsWithEnglish != filtered {
                 return false
             }
             if let seperator = Locale.current.decimalSeparator {
@@ -211,11 +219,11 @@ public class TtroTextField: UITextField {
             }
             else {
                 if (text?.count ?? 0) > 0{
-                    if let char = text?.unicodeScalars.last,
+                    if let char = englishDigitText?.unicodeScalars.last,
                         CharacterSet.decimalDigits.contains(char) {
                         
-                        let deleting = text!.substring(from: text!.index(text!.endIndex, offsetBy: -1))
-                        if let range = doubleString.range(of: deleting, options: String.CompareOptions.backwards, range: nil, locale: nil) {
+                        let deleting = englishDigitText!.substring(from: englishDigitText!.index(englishDigitText!.endIndex, offsetBy: -1))
+                        if let range = doubleString.replacedArabicDigitsWithEnglish.range(of: deleting, options: String.CompareOptions.backwards, range: nil, locale: nil) {
                             print(range)
                             doubleString.removeSubrange(range.lowerBound..<doubleString.endIndex)
                         }
@@ -237,7 +245,7 @@ public class TtroTextField: UITextField {
         // If the original string is equal to the filtered string, i.e. if no
         // inverse characters were present to be eliminated, the input is valid
         // and the statement returns true; else it returns false
-        return string == filtered
+        return string.replacedArabicDigitsWithEnglish == filtered
     }
     
     public func setCurvature(corners : UIRectCorner, radius : CGFloat){
@@ -257,6 +265,10 @@ public class TtroTextField: UITextField {
             borderStyle = .none
             layer.cornerRadius = 0
         }
+    }
+    
+    @objc public func textFieldDidChange(_ textField: UITextField) {
+//        textField.text = text?.replacedArabicDigitsWithEnglish
     }
     
     let padding = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
