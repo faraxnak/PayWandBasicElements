@@ -23,6 +23,17 @@ public class TtroButton: UIButton {
         self.mode = mode
     }
     
+    override public func setTitle(_ title: String?, for state: UIControlState) {
+        var localeTitle = title?.arabicEnglishDigitsTranslation(toEnglish: Locale.current.languageCode != "ar")
+        super.setTitle(localeTitle, for: state)
+    }
+    
+    override public var currentTitle: String? {
+        get {
+            return super.currentTitle?.arabicEnglishDigitsTranslation()
+        }
+    }
+    
     public func setColor(color: UIColor, highlightColor: UIColor? = nil, textColor: UIColor? = nil){
         self.color = color
         if highlightColor != nil {

@@ -28,6 +28,19 @@ public class TtroLabel: UILabel {
 //        }
 //    }
     
+    override public var text: String? {
+        get {
+            return super.text?.arabicEnglishDigitsTranslation()
+        }
+        set {
+            if Locale.current.languageCode == "ar" {
+                super.text = newValue?.arabicEnglishDigitsTranslation(toEnglish: false)
+            } else {
+                super.text = newValue?.arabicEnglishDigitsTranslation()
+            }
+        }
+    }
+    
     public convenience init(font : UIFont, color : UIColor, shouldShowSelector : Bool = false) {
         self.init(frame : CGRect.zero)
         textColor = color

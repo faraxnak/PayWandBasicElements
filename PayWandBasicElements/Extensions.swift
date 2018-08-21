@@ -644,9 +644,10 @@ public extension String {
         return boundingBox.width
     }
     
-    public var replacedArabicDigitsWithEnglish: String {
+    public func arabicEnglishDigitsTranslation(toEnglish : Bool = true) -> String {
         var str = self
-        let map = ["٠": "0",
+        let mapArabic = [
+                   "٠": "0",
                    "١": "1",
                    "٢": "2",
                    "٣": "3",
@@ -655,7 +656,8 @@ public extension String {
                    "٦": "6",
                    "٧": "7",
                    "٨": "8",
-                   "٩": "9",
+                   "٩": "9"]
+        let mapPersian = [
                    "۰": "0",
                    "۱": "1",
                    "۲": "2",
@@ -666,7 +668,12 @@ public extension String {
                    "۷": "7",
                    "۸": "8",
                    "۹": "9"]
-        map.forEach { str = str.replacingOccurrences(of: $0, with: $1) }
+        if toEnglish {
+            mapArabic.forEach { str = str.replacingOccurrences(of: $0, with: $1) }
+            mapPersian.forEach { str = str.replacingOccurrences(of: $0, with: $1) }
+        } else {
+            mapArabic.forEach { str = str.replacingOccurrences(of: $1, with: $0) }
+        }
         return str
     }
 }
@@ -712,6 +719,14 @@ public extension UIImage {
         UIGraphicsEndImageContext()
         
         return newImage!
+    }
+}
+
+extension UISearchBar {
+    public var textInEnglish : String? {
+        get {
+            return text?.arabicEnglishDigitsTranslation()
+        }
     }
 }
 
