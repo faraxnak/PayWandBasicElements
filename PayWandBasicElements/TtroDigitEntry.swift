@@ -75,7 +75,9 @@ public class TtroDigitEntry: UITextField, UITextFieldDelegate {
     public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
         // Create an `NSCharacterSet` set which includes everything *but* the digits
-        let inverseSet = CharacterSet(charactersIn:"0123456789●" + defaultChar).inverted
+        let chars = "0123456789●"
+        let cSet = CharacterSet(charactersIn: chars + defaultChar)
+        let inverseSet = cSet.inverted
         
         // At every character in this "inverseSet" contained in the string,
         // split the string up into components which exclude the characters
@@ -93,12 +95,17 @@ public class TtroDigitEntry: UITextField, UITextFieldDelegate {
         }
         
         if (string != ""){
-            if (text == defaultChar){
-                text = ""
+            if ((text ?? "").contains(defaultChar)){
+                text = String(text!.filter { chars.contains($0) })
+//                text = ""
+            } else if (text?.count) ?? -1 > numOfDigits {
+                let str = text!
+                let index = str.index(str.startIndex, offsetBy: numOfDigits)
+                text = String(str[..<index])
             } else if text?.count == numOfDigits {
                 if (nextTextField != nil){
-                    nextTextField?.text = ""
                     nextTextField?.becomeFirstResponder()
+                    
                 } else {
                     return false
                 }
@@ -123,6 +130,11 @@ public class TtroDigitEntry: UITextField, UITextFieldDelegate {
     
     @objc public func textFieldDidChange(_ textField: UITextField) {
         textField.text = text?.arabicEnglishDigitsTranslation()
+        if textField.text?.count == numOfDigits {
+            if (nextTextField != nil){
+                nextTextField?.becomeFirstResponder()
+            }
+        }
     }
     
     public func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {

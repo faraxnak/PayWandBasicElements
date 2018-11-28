@@ -187,10 +187,11 @@ public class TtroTextField: UITextField {
         
         switch _inputMode {
         case .phoneNumber:
-            if ((text!.count) == 13 && string != "")
-            {
-                self.endEditing(true)
-            }
+//            if ((text!.count) == 13 && string != "")
+//            {
+//                self.endEditing(true)
+//            }
+            break
             
         case .double:
             if string.arabicEnglishDigitsTranslation() != filtered {
@@ -354,7 +355,8 @@ extension TtroTextField {
         case .name:
             isValid = isValidName()
         case .phoneNumber:
-            isValid = isValidPhone()
+            break
+            //isValid = isValidPhone()
         default:
             break
         }
